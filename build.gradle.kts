@@ -59,7 +59,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/${project.name}") // 发布到 GitHub Packages
+            url = uri("https://maven.pkg.github.com/zongkx/yurss")
             credentials {
                 username = project.properties["GITHUB_ACTOR"] as? String ?: System.getenv("GITHUB_ACTOR")
                 password = project.properties["GITHUB_TOKEN"] as? String ?: System.getenv("GITHUB_TOKEN")
