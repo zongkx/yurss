@@ -3,7 +3,6 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
     id("org.jetbrains.intellij.platform") version "2.7.2"
     id("com.jetbrains.changelog") version "2.0.1"
-    id("org.jetbrains.kotlin.jvm") version "1.9.23"
     id("java") // 添加 java 插件
     id("maven-publish") // 添加 maven-publish 插件
 }
