@@ -10,6 +10,7 @@ group = "com.zongkx"
 version = "1.0.0"
 
 repositories {
+    gradlePluginPortal()
     mavenCentral()
     intellijPlatform {
         defaultRepositories()
