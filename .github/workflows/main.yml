@@ -34,10 +34,31 @@ jobs:
       # 步骤 3: 授予 Gradle 脚本执行权限
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+      
+      # 步骤 4: 构建插件
+      - name: Build plugin
+        run: ./gradlew buildPlugin
+     
+      # 步骤 5: 获取构建产物路径
+      - name: Get artifact path
+        id: get-artifact-path
+        run: echo "ARTIFACT_PATH=$(ls build/distributions/*.zip)" >> $GITHUB_ENV
 
+      # 步骤 6: 上传 Release 附件
+      # 这个步骤会在 GitHub Release 中创建或更新一个附件
+      - name: Upload plugin to Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/') # 确保只在 tag 被推送时运行
+        with:
+          files: ${{ env.ARTIFACT_PATH }}
+          draft: false # 是否创建草稿 Release
+          prerelease: false # 是否为预发布版本
+          body_path: CHANGELOG.md # 自动从 CHANGELOG.md 文件获取发布说明
+
+          
       # 步骤 4: 构建并发布插件到 GitHub Packages
       # 环境变量 GITHUB_TOKEN 是用于身份验证的关键
-      - name: Build and Publish Plugin
-        run: ./gradlew buildPlugin publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+      # - name: Build and Publish Plugin
+      #   run: ./gradlew buildPlugin publish
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
