@@ -1,0 +1,41 @@
+name: Build and Publish Plugin
+
+# 设置触发器：当代码被推送到 main 分支时触发
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 在最新的 Ubuntu 虚拟机上运行
+
+    steps:
+      # 步骤 1: 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 步骤 2: 设置 JDK 环境
+      # 你需要根据你的插件项目要求设置合适的 JDK 版本
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21' # 示例：使用 JDK 17
+          distribution: 'temurin'
+          cache: 'gradle' # 缓存 Gradle 依赖，加速后续构建
+
+      # 步骤 3: 授予 Gradle 脚本执行权限
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      # 步骤 4: 运行 Gradle buildPlugin 任务
+      - name: Build plugin
+        run: ./gradlew buildPlugin
+
+      # 步骤 5: 上传构建产物
+      # 这会将生成的 ZIP 文件上传到 GitHub Actions 的构建页面
+      - name: Upload plugin artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: your-plugin-name # 产物的名称
+          path: build/distributions/*.zip # 你需要根据你的实际路径来修改

@@ -1,11 +1,11 @@
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.5.0"
+    id("org.jetbrains.intellij.platform") version "2.7.2"
 }
 
-group = "com.example"
-version = "1.0-SNAPSHOT"
+group = "com.zongkx"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ dependencies {
     }
     // OkHttp 是一个现代的、高效的 HTTP 客户端
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    
+
     // Rome是一个用于解析RSS和Atom Feed的库
     implementation("com.rometools:rome:1.18.0")
     // Rome依赖JDom，它是一个XML解析库
