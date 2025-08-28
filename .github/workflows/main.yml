@@ -15,7 +15,7 @@ jobs:
 
     # 授予此任务访问 secrets 和 packages 的权限
     permissions:
-      contents: read
+      contents: write # This is the critical line
       packages: write
       
     steps:
