@@ -1,4 +1,4 @@
-package com.example.yurss
+package com.zongkx.yurss
 
 
 import com.intellij.openapi.project.Project
