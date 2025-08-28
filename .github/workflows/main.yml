@@ -3,7 +3,7 @@ name: Build and Publish Plugin
 on:
   push:
     branches:
-      - main
+      - master
   release: # 推荐：在创建新版本（release）时触发
     types: [published]
 
