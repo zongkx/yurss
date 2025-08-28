@@ -2,6 +2,10 @@ plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
     id("org.jetbrains.intellij.platform") version "2.7.2"
+    id("com.jetbrains.changelog") version "2.0.1"
+    id("org.jetbrains.kotlin.jvm") version "1.9.23"
+    id("java") // 添加 java 插件
+    id("maven-publish") // 添加 maven-publish 插件
 }
 
 group = "com.zongkx"
@@ -44,7 +48,36 @@ intellijPlatform {
         """.trimIndent()
     }
 }
+// build.gradle.kts
+publishing {
+    publications {
+        create<MavenPublication>("pluginPublication") {
+            groupId = "com.zongkx.yurss" // 你的 GroupId
+            artifactId = "yurss" // 你的 ArtifactId
+            version = "1.0.0" // 你的插件版本
 
+            artifact(tasks.getByName("buildPlugin")) {
+                extension = "zip"
+            }
+
+            pom {
+                name.set("Yurss")
+                description.set("A simple RSS reader plugin for IntelliJ IDEA.")
+                // ... 更多 POM 信息
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/${project.name}") // 发布到 GitHub Packages
+            credentials {
+                username = project.properties["GITHUB_ACTOR"] as? String ?: System.getenv("GITHUB_ACTOR")
+                password = project.properties["GITHUB_TOKEN"] as? String ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
