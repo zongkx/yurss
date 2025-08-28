@@ -1,18 +1,21 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.yurss</id>
+    <id>com.zongkx.yurss</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
-    <name>Yurss</name>
+    <name>Yu-RSS</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.aaa.com">aaa</vendor>
+    <vendor url="https://github.com/zongkx">aaa</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
-    <description>yurss</description>
+    <description>
+        RSS Reader plugin
+        你可以使用这个RSS阅读器在idea中隐秘的查看你想看到的RSS订阅信息, 支持添加任何你喜欢的RSS 源
+    </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -21,9 +24,9 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.example.yurss.MyToolWindowFactory"
-                    id="YuRSS"
+        <toolWindow factoryClass="com.zongkx.yurss.MyToolWindowFactory"
+                    id="com.zongkx.yurss"
                     anchor="right"
-                    icon="/icons/pluginIcon.svg"/>
+                    icon="/icon.svg"/>
     </extensions>
 </idea-plugin>

@@ -1,67 +1,84 @@
-package com.example.yurss
+package com.zongkx.yurss
 
+import com.intellij.ide.util.PropertiesComponent
 import com.intellij.openapi.project.Project
-import com.intellij.ui.components.*
+import com.intellij.ui.OnePixelSplitter
+import com.intellij.ui.components.JBLabel
+import com.intellij.ui.components.JBPanel
+import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.treeStructure.Tree
+import com.rometools.rome.feed.synd.SyndFeed
+import com.rometools.rome.io.SyndFeedInput
 import kotlinx.coroutines.*
-import org.w3c.dom.Document
-import org.w3c.dom.NodeList
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import java.awt.BorderLayout
 import java.awt.Dimension
-import java.net.URL
+import java.awt.EventQueue
+import java.io.StringReader
 import javax.swing.JButton
+import javax.swing.JComboBox
 import javax.swing.JTextArea
 import javax.swing.JTextField
-import javax.swing.JSplitPane
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.DefaultTreeModel
-import javax.xml.parsers.DocumentBuilderFactory
-import com.intellij.ui.components.JBScrollPane
-import com.intellij.util.ui.UIUtil
-import java.awt.EventQueue
-import com.intellij.ui.OnePixelSplitter
-import com.intellij.ide.util.PropertiesComponent
-import javax.swing.JComboBox
-import com.rometools.rome.feed.synd.SyndEntry
-import com.rometools.rome.io.SyndFeedInput
-import com.rometools.rome.io.XmlReader
 
 // 定义一个数据类来存储 RSS 文章信息
 data class RssArticle(
     val title: String,
     val link: String,
     val description: String
-)
+) {
+    override fun toString(): String {
+        return title
+    }
+}
 
-// 使用 Rome 解析RSS网络请求和解析服务
+// 使用 OkHttp 替换 URL.openStream() 来进行网络请求
 class RssService {
-    // 正则表达式用于匹配并移除所有HTML标签
+    // OkHttp 客户端实例，建议在整个应用中重用以提高效率
+    private val httpClient = OkHttpClient.Builder().build()
     private val htmlTagRegex = "<[^>]*>".toRegex()
 
     suspend fun fetchRssFeed(url: String): List<RssArticle> {
         return withContext(Dispatchers.IO) {
             val articles = mutableListOf<RssArticle>()
             try {
-                // 使用Rome库加载和解析RSS源
-                val feedUrl = URL(url)
-                val input = SyndFeedInput()
-                val feed = input.build(XmlReader(feedUrl))
+                // 使用 OkHttp 构建请求
+                val request = Request.Builder()
+                    .url(url)
+                    .build()
 
-                for (entry in feed.entries) {
-                    // 获取原始标题和描述
-                    val originalTitle = (entry as? SyndEntry)?.title ?: "No Title"
-                    val originalDescription = (entry as? SyndEntry)?.description?.value ?: "No Description"
-                    val link = (entry as? SyndEntry)?.link ?: ""
+                // 执行请求并获取响应
+                val response: Response = httpClient.newCall(request).execute()
 
-                    // 使用正则表达式移除HTML标签
-                    val cleanedTitle = originalTitle.replace(htmlTagRegex, "").trim()
-                    val cleanedDescription = originalDescription.replace(htmlTagRegex, "").trim()
+                if (response.isSuccessful) {
+                    val feedContent = response.body?.string() ?: ""
 
-                    articles.add(RssArticle(cleanedTitle, link, cleanedDescription))
+                    // 使用 StringReader 将内容传递给 Rome
+                    if (feedContent.isNotBlank()) {
+                        val input = SyndFeedInput()
+                        val feed: SyndFeed = input.build(StringReader(feedContent))
+
+                        for (entry in feed.entries) {
+                            val originalTitle = entry.title
+                            val originalDescription = entry.description?.value ?: ""
+                            val link = entry.link
+                            val cleanedTitle = originalTitle.replace(htmlTagRegex, "").trim()
+                            val cleanedDescription = originalDescription.replace(htmlTagRegex, "").trim()
+                            articles.add(RssArticle(cleanedTitle, link, cleanedDescription))
+                        }
+                    } else {
+                        articles.add(RssArticle("Empty RSS content received.", "", ""))
+                    }
+                } else {
+                    // 如果请求失败，添加错误信息
+                    articles.add(RssArticle("HTTP Error: ${response.code}", "", response.message))
                 }
             } catch (e: Exception) {
-                // 处理解析或网络错误
-                e.printStackTrace()
+                // 捕获并处理所有异常，包括网络和解析错误
+                articles.add(RssArticle("Error: ${e.message}", "", ""))
             }
             articles
         }
@@ -73,10 +90,10 @@ class RssToolWindowContent(private val project: Project) {
 
     private val mainPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val rssService = RssService()
-    private val rootNode = DefaultMutableTreeNode("RSS Feeds")
+    private val rootNode = DefaultMutableTreeNode("RSS")
     private val treeModel = DefaultTreeModel(rootNode)
     private val articleTree = Tree(treeModel)
-    private val contentArea = JTextArea("文章内容将在此处显示...")
+    private val contentArea = JTextArea("...")
     private val urlComboBox = JComboBox<String>()
     private val loadingPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val loadingLabel = JBLabel("Loading...")
@@ -124,7 +141,7 @@ class RssToolWindowContent(private val project: Project) {
                 saveRssUrls()
                 // 清空内容区
                 displayArticles(emptyList())
-                contentArea.text = "文章内容将在此处显示..."
+                contentArea.text = "..."
             }
         }
 
@@ -147,7 +164,7 @@ class RssToolWindowContent(private val project: Project) {
             if (article != null) {
                 // 在事件调度线程上更新UI
                 EventQueue.invokeLater {
-                    contentArea.text = "标题: ${article.title}\n链接: ${article.link}\n\n${article.description}"
+                    contentArea.text = "${article.title}\n ${article.link}\n\n${article.description}"
                     contentArea.caretPosition = 0 // 滚动到顶部
                 }
             }
