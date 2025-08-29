@@ -48,14 +48,11 @@ jobs:
       # 这个步骤会在 GitHub Release 中创建或更新一个附件
       - name: Upload plugin to Release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ${{ env.ARTIFACT_PATH }}
-          draft: false
-          prerelease: false
           body_path: CHANGELOG.md
-          token: ${{ secrets.GH_PACKAGE_TOKEN }} # 👈 使用你创建的 Secret
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
           
       # 步骤 4: 构建并发布插件到 GitHub Packages
       # 环境变量 GITHUB_TOKEN 是用于身份验证的关键
