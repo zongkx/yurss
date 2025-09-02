@@ -28,7 +28,8 @@ import javax.swing.tree.DefaultTreeModel
 data class RssArticle(
     val title: String,
     val link: String,
-    val description: String
+    val description: String,
+    val content: String
 ) {
     override fun toString(): String {
         return title
@@ -64,21 +65,22 @@ class RssService {
                         for (entry in feed.entries) {
                             val originalTitle = entry.title
                             val originalDescription = entry.description?.value ?: ""
+                            val originalDescriptionContents =
+                                entry.contents?.joinToString(separator = " ") { it.value.toString() } ?: ""
                             val link = entry.link
                             val cleanedTitle = originalTitle.replace(htmlTagRegex, "").trim()
                             val cleanedDescription = originalDescription.replace(htmlTagRegex, "").trim()
-                            articles.add(RssArticle(cleanedTitle, link, cleanedDescription))
+                            val content = originalDescriptionContents.replace(htmlTagRegex, "").trim()
+                            articles.add(RssArticle(cleanedTitle, link, cleanedDescription, content))
                         }
-                    } else {
-                        articles.add(RssArticle("Empty RSS content received.", "", ""))
                     }
                 } else {
                     // 如果请求失败，添加错误信息
-                    articles.add(RssArticle("HTTP Error: ${response.code}", "", response.message))
+                    articles.add(RssArticle("HTTP Error: ${response.code}", "", response.message, ""))
                 }
             } catch (e: Exception) {
                 // 捕获并处理所有异常，包括网络和解析错误
-                articles.add(RssArticle("Error: ${e.message}", "", ""))
+                articles.add(RssArticle("Error: ${e.message}", "", "", ""))
             }
             articles
         }
@@ -164,7 +166,8 @@ class RssToolWindowContent(private val project: Project) {
             if (article != null) {
                 // 在事件调度线程上更新UI
                 EventQueue.invokeLater {
-                    contentArea.text = "${article.title}\n ${article.link}\n\n${article.description}"
+                    contentArea.text =
+                        "${article.title}\n ${article.link}\n\n${article.description} \n\n${article.content}"
                     contentArea.caretPosition = 0 // 滚动到顶部
                 }
             }
