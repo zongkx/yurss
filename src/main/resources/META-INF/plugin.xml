@@ -12,10 +12,10 @@
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
-    <description>
-        RSS Reader plugin
-        你可以使用这个RSS阅读器在idea中隐秘的查看你想看到的RSS订阅信息, 支持添加任何你喜欢的RSS 源
-    </description>
+    <description><![CDATA[RSS Reader  <br/>
+    You can use this RSS reader to secretly view RSS feeds you want to see in IDEA, and support adding any RSS feeds you like.
+     <br/>
+你可以使用这个RSS阅读器在idea中隐秘的查看你想看到的RSS订阅信息, 支持添加任何你喜欢的RSS源<br/>]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
