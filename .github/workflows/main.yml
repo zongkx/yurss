@@ -1,41 +1,66 @@
 name: Build and Publish Plugin
 
-# 设置触发器：当代码被推送到 main 分支时触发
+# 触发器：当代码被推送到 main 分支时触发
+# 也可以选择在创建新版本（release）时触发
+# on:
+#   push:
+#     branches:
+#       - master
+#   release:
+#     types: [published]
 on:
   push:
-    branches:
-      - master
-
+    tags:
+      - 'v*' # 仅当新的标签以 'v' 开头时触发
 jobs:
-  build:
+  build-and-publish-job: # 合并后的任务名称
     runs-on: ubuntu-latest # 在最新的 Ubuntu 虚拟机上运行
 
+    # 授予此任务访问 secrets 和 packages 的权限
+    permissions:
+      contents: write # This is the critical line
+      packages: write
+      
     steps:
       # 步骤 1: 检出代码
       - name: Checkout code
         uses: actions/checkout@v4
 
       # 步骤 2: 设置 JDK 环境
-      # 你需要根据你的插件项目要求设置合适的 JDK 版本
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '17' # 示例：使用 JDK 17
+          java-version: '21'
           distribution: 'temurin'
-          cache: 'gradle' # 缓存 Gradle 依赖，加速后续构建
+          cache: 'gradle'
 
       # 步骤 3: 授予 Gradle 脚本执行权限
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
-      # 步骤 4: 运行 Gradle buildPlugin 任务
+      
+      # 步骤 4: 构建插件
       - name: Build plugin
         run: ./gradlew buildPlugin
+     
+      # 步骤 5: 获取构建产物路径
+      - name: Get artifact path
+        id: get-artifact-path
+        run: echo "ARTIFACT_PATH=$(ls build/distributions/*.zip)" >> $GITHUB_ENV
 
-      # 步骤 5: 上传构建产物
-      # 这会将生成的 ZIP 文件上传到 GitHub Actions 的构建页面
-      - name: Upload plugin artifact
-        uses: actions/upload-artifact@v4
+      # 步骤 6: 上传 Release 附件
+      # 这个步骤会在 GitHub Release 中创建或更新一个附件
+      - name: Upload plugin to Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: your-plugin-name # 产物的名称
-          path: build/distributions/*.zip # 你需要根据你的实际路径来修改
+          files: ${{ env.ARTIFACT_PATH }}
+          tag_name: ${{ github.ref_name }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+          
+      # 步骤 4: 构建并发布插件到 GitHub Packages
+      # 环境变量 GITHUB_TOKEN 是用于身份验证的关键
+      # - name: Build and Publish Plugin
+      #   run: ./gradlew buildPlugin publish
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
