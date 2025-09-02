@@ -1,7 +1,7 @@
 package com.zongkx.yurss
 
 import com.intellij.ide.util.PropertiesComponent
-import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.ComboBox
 import com.intellij.ui.OnePixelSplitter
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
@@ -18,7 +18,6 @@ import java.awt.Dimension
 import java.awt.EventQueue
 import java.io.StringReader
 import javax.swing.JButton
-import javax.swing.JComboBox
 import javax.swing.JTextArea
 import javax.swing.JTextField
 import javax.swing.tree.DefaultMutableTreeNode
@@ -88,7 +87,7 @@ class RssService {
 }
 
 // RssToolWindow 的 UI 内容
-class RssToolWindowContent(private val project: Project) {
+class RssToolWindowContent() {
 
     private val mainPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val rssService = RssService()
@@ -96,7 +95,7 @@ class RssToolWindowContent(private val project: Project) {
     private val treeModel = DefaultTreeModel(rootNode)
     private val articleTree = Tree(treeModel)
     private val contentArea = JTextArea("...")
-    private val urlComboBox = JComboBox<String>()
+    private val urlComboBox = ComboBox<String>()
     private val loadingPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val loadingLabel = JBLabel("Loading...")
     private val addButton = JButton("Add")
@@ -222,7 +221,7 @@ class RssToolWindowContent(private val project: Project) {
 
     private fun saveRssUrls() {
         val properties = PropertiesComponent.getInstance()
-        val urls = (0 until urlComboBox.itemCount).map { urlComboBox.getItemAt(it) }.joinToString(",")
+        val urls = (0 until urlComboBox.itemCount).joinToString(",") { urlComboBox.getItemAt(it) }
         properties.setValue(RSS_URLS_KEY, urls)
     }
 
