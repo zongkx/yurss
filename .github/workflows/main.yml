@@ -2,13 +2,16 @@ name: Build and Publish Plugin
 
 # 触发器：当代码被推送到 main 分支时触发
 # 也可以选择在创建新版本（release）时触发
+# on:
+#   push:
+#     branches:
+#       - master
+#   release:
+#     types: [published]
 on:
   push:
-    branches:
-      - master
-  release:
-    types: [published]
-
+    tags:
+      - 'v*' # 仅当新的标签以 'v' 开头时触发
 jobs:
   build-and-publish-job: # 合并后的任务名称
     runs-on: ubuntu-latest # 在最新的 Ubuntu 虚拟机上运行
@@ -50,7 +53,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ${{ env.ARTIFACT_PATH }}
-          tag_name: ${{ github.ref }} # 添加这一行
+          tag_name: ${{ github.ref_name }}
           body_path: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
