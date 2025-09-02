@@ -9,14 +9,9 @@ import com.intellij.ui.content.ContentFactory
 class MyToolWindowFactory : ToolWindowFactory {
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        // 实例化你的 UI 内容组件
         val myToolWindowContent = RssToolWindowContent(project)
-
-        // 使用 ContentFactory 创建一个 Content 实例
-        val content = ContentFactory.SERVICE.getInstance()
-            .createContent(myToolWindowContent.getContent(), "", false)
-
-        // 将 Content 添加到 ToolWindow 中
+        val contentFactory = project.getService(ContentFactory::class.java)
+        val content = contentFactory.createContent(myToolWindowContent.getContent(), "", false)
         toolWindow.contentManager.addContent(content)
     }
 }
