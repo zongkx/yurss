@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.zongkx"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     gradlePluginPortal()
@@ -43,7 +43,7 @@ publishing {
         create<MavenPublication>("pluginPublication") {
             groupId = "com.zongkx.yurss" // 你的 GroupId
             artifactId = "yurss" // 你的 ArtifactId
-            version = "1.0.0" // 你的插件版本
+            version = "1.0.1" // 你的插件版本
 
             artifact(tasks.getByName("buildPlugin")) {
                 extension = "zip"
@@ -53,16 +53,6 @@ publishing {
                 name.set("Yurss")
                 description.set("A simple RSS reader plugin for IntelliJ IDEA.")
                 // ... 更多 POM 信息
-            }
-        }
-    }
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/zongkx/yurss")
-            credentials {
-                username = project.properties["GITHUB_ACTOR"] as? String ?: System.getenv("GITHUB_ACTOR")
-                password = project.properties["GITHUB_TOKEN"] as? String ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
