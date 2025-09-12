@@ -11,6 +11,7 @@ fun main() {
     val myCookieJar = object : CookieJar {
         private val cookieStore: HashMap<String, MutableList<Cookie>> = HashMap()
 
+        @JvmName("saveFromResponseWithList")
         fun saveFromResponse(url: HttpUrl, cookies: MutableList<Cookie>) {
             // 将从响应中获取的 Cookie 存到内存中
             cookieStore[url.host] = cookies

@@ -1,7 +1,7 @@
 package com.zongkx.yurss
 
 import com.intellij.ide.util.PropertiesComponent
-import com.intellij.openapi.ui.ComboBox
+import com.intellij.ui.DocumentAdapter
 import com.intellij.ui.OnePixelSplitter
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
@@ -10,6 +10,9 @@ import com.intellij.ui.treeStructure.Tree
 import com.rometools.rome.feed.synd.SyndFeed
 import com.rometools.rome.io.SyndFeedInput
 import kotlinx.coroutines.*
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.jsonObject
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -17,11 +20,11 @@ import java.awt.BorderLayout
 import java.awt.Dimension
 import java.awt.EventQueue
 import java.io.StringReader
-import javax.swing.JButton
-import javax.swing.JTextArea
-import javax.swing.JTextField
+import javax.swing.*
+import javax.swing.event.DocumentEvent
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.DefaultTreeModel
+import javax.swing.tree.TreePath
 
 // 定义一个数据类来存储 RSS 文章信息
 data class RssArticle(
@@ -91,16 +94,30 @@ class RssToolWindowContent() {
 
     private val mainPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val rssService = RssService()
-    private val rootNode = DefaultMutableTreeNode("RSS")
+
+    // 根节点，现在将用于存储 RSS 订阅 URL
+    private val rootNode = DefaultMutableTreeNode("RSS Subscriptions")
     private val treeModel = DefaultTreeModel(rootNode)
     private val articleTree = Tree(treeModel)
+
     private val contentArea = JTextArea("...")
-    private val urlComboBox = ComboBox<String>()
     private val loadingPanel = JBPanel<JBPanel<*>>(BorderLayout())
     private val loadingLabel = JBLabel("Loading...")
-    private val addButton = JButton("Add")
-    private val removeButton = JButton("Remove") // 添加删除按钮
+
+    // 使用 IconLoader 加载 SVG 图标并设置无边框
+    private val addButton = JButton(MyIcons.ADD).apply {
+        preferredSize = Dimension(24, 24)
+        border = BorderFactory.createEmptyBorder()
+        isBorderPainted = false
+        isContentAreaFilled = false
+        isFocusPainted = false
+    }
+
+
     private val addUrlTextField = JTextField()
+    private val suggestionPopup = JPopupMenu()
+
+    private var allLocalUrls: List<Map<String, String>> = emptyList()
 
     companion object {
         private const val RSS_URLS_KEY = "my.rss.plugin.urls"
@@ -108,51 +125,37 @@ class RssToolWindowContent() {
 
     init {
         // 创建顶部输入面板
-        val inputPanel = JBPanel<JBPanel<*>>(BorderLayout())
         val urlInputPanel = JBPanel<JBPanel<*>>(BorderLayout())
         urlInputPanel.add(addUrlTextField, BorderLayout.CENTER)
         val buttonPanel = JBPanel<JBPanel<*>>()
         buttonPanel.add(addButton)
-        buttonPanel.add(removeButton) // 将按钮添加到面板
         urlInputPanel.add(buttonPanel, BorderLayout.EAST)
 
-        inputPanel.add(JBLabel("RSS URL:"), BorderLayout.NORTH)
-        inputPanel.add(urlComboBox, BorderLayout.CENTER)
-        inputPanel.add(urlInputPanel, BorderLayout.SOUTH)
+        // 创建顶层面板来容纳输入面板
+        val topPanel = JBPanel<JBPanel<*>>(BorderLayout())
+        topPanel.add(urlInputPanel, BorderLayout.NORTH)
 
+        // 加载已保存的URL到树中
         loadSavedRssUrls()
 
         // 添加一个监听器到“Add”按钮
         addButton.addActionListener {
             val newUrl = addUrlTextField.text
-            if (newUrl.isNotBlank() && findUrlInComboBox(newUrl) == -1) {
-                urlComboBox.addItem(newUrl)
-                saveRssUrls()
-                addUrlTextField.text = ""
-                // 自动切换到新添加的URL并加载
-                urlComboBox.selectedItem = newUrl
+            if (newUrl.isNotBlank()) {
+                // 检查是否已存在
+                if (!isUrlInTree(newUrl)) {
+                    addUrlToTree(newUrl)
+                    saveRssUrls()
+                    addUrlTextField.text = ""
+                }
             }
         }
-
-        // 添加一个监听器到“Remove”按钮
-        removeButton.addActionListener {
-            val selectedUrl = urlComboBox.selectedItem as? String
-            if (selectedUrl != null) {
-                urlComboBox.removeItem(selectedUrl)
-                saveRssUrls()
-                // 清空内容区
-                displayArticles(emptyList())
-                contentArea.text = "..."
+        // 新增：为 addUrlTextField 添加实时联想搜索监听器
+        addUrlTextField.document.addDocumentListener(object : DocumentAdapter() {
+            override fun textChanged(e: DocumentEvent) {
+                showSuggestions(addUrlTextField.text)
             }
-        }
-
-        // 添加一个监听器到下拉框
-        urlComboBox.addActionListener {
-            val selectedUrl = urlComboBox.selectedItem as? String
-            if (selectedUrl != null && selectedUrl.isNotBlank()) {
-                loadRssFeed(selectedUrl)
-            }
-        }
+        })
 
         // 设置加载面板
         loadingPanel.add(loadingLabel, BorderLayout.CENTER)
@@ -161,16 +164,24 @@ class RssToolWindowContent() {
         // 配置文章树
         articleTree.addTreeSelectionListener {
             val node = it.path.lastPathComponent as? DefaultMutableTreeNode
-            val article = node?.userObject as? RssArticle
-            if (article != null) {
-                // 在事件调度线程上更新UI
-                EventQueue.invokeLater {
-                    contentArea.text =
-                        "${article.title}\n ${article.link}\n\n${article.description} \n\n${article.content}"
-                    contentArea.caretPosition = 0 // 滚动到顶部
+            when (val userObject = node?.userObject) {
+                is String -> { // 如果选中了一个 URL 节点
+                    loadRssFeed(userObject)
+                }
+
+                is RssArticle -> { // 如果选中了一篇文章节点
+                    // 在事件调度线程上更新UI
+                    EventQueue.invokeLater {
+                        contentArea.text =
+                            "${userObject.title}\n ${userObject.link}\n\n${userObject.description} \n\n${userObject.content}"
+                        contentArea.caretPosition = 0 // 滚动到顶部
+                    }
                 }
             }
         }
+
+        // 禁用树的 tooltip
+        articleTree.toolTipText = null
 
         // 设置内容区域
         contentArea.lineWrap = true
@@ -183,9 +194,78 @@ class RssToolWindowContent() {
         splitter.secondComponent = JBScrollPane(contentArea)
 
         mainPanel.preferredSize = Dimension(400, 600)
-        mainPanel.add(inputPanel, BorderLayout.NORTH)
+        mainPanel.add(topPanel, BorderLayout.NORTH)
         mainPanel.add(splitter, BorderLayout.CENTER)
         mainPanel.add(loadingPanel, BorderLayout.SOUTH)
+
+        // 新增：在初始化时加载本地 RSS 文件
+        loadLocalRssFile()
+    }
+
+
+    // 新增：加载本地 rss.json 文件
+    private fun loadLocalRssFile(): String {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val fileName = "rss.json"
+                // 通过类加载器获取文件流
+                val inputStream = object {}.javaClass.getResourceAsStream("/$fileName")
+                    ?: throw IllegalArgumentException("文件未找到: $fileName")
+                // 从输入流中读取内容
+                val content = inputStream.bufferedReader().use { it.readText() }
+                val jsonElement = Json.parseToJsonElement(content)
+                if (jsonElement is JsonArray) {
+                    allLocalUrls = jsonElement.map { it.jsonObject }
+                        .map { map ->
+                            map.mapValues { (_, value) ->
+                                value.toString().trim { it == '"' }
+                            }
+                        }
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return ""
+    }
+
+    // 新增：根据搜索文本过滤并显示结果（此函数现在只用于显示已加载源的文章，不处理本地rss.json）
+    private fun searchLocalRss(query: String) {
+        // 此函数不再使用
+    }
+
+    // 新增：显示联想建议的弹出菜单
+    private fun showSuggestions(query: String) {
+        suggestionPopup.removeAll()
+        if (query.isBlank()) {
+            suggestionPopup.isVisible = false
+            return
+        }
+
+        val filteredUrls = allLocalUrls.filter {
+            it["title"]?.contains(query, ignoreCase = true) ?: false ||
+                    it["feedUrl"]?.contains(query, ignoreCase = true) ?: false
+        }.take(10) // 只显示前10个结果
+
+        if (filteredUrls.isNotEmpty()) {
+            filteredUrls.forEach { urlMap ->
+                val title = urlMap["title"]
+                val url = urlMap["feedUrl"]
+                val item = JMenuItem(title)
+                item.addActionListener {
+                    // 点击后，将URL填充到输入框中
+                    if (url != null) {
+                        addUrlTextField.text = url
+                    }
+                    suggestionPopup.isVisible = false // 隐藏弹出菜单
+                }
+                suggestionPopup.add(item)
+            }
+            suggestionPopup.show(addUrlTextField, 0, addUrlTextField.height)
+        } else {
+            suggestionPopup.isVisible = false
+        }
     }
 
     private fun loadRssFeed(url: String) {
@@ -194,13 +274,25 @@ class RssToolWindowContent() {
         // 在协程中加载RSS源
         CoroutineScope(Dispatchers.Main).launch {
             try {
-                urlComboBox.isEnabled = false // 禁用下拉框
                 loadingLabel.text = "Loading..."
                 val articles = rssService.fetchRssFeed(url)
-                displayArticles(articles)
+
+                // 找到对应的 URL 节点
+                val urlNode = findNodeForUrl(url)
+                if (urlNode != null) {
+                    // 清除旧的文章
+                    urlNode.removeAllChildren()
+                    // 添加新文章
+                    articles.forEach { article ->
+                        val articleNode = DefaultMutableTreeNode(article)
+                        urlNode.add(articleNode)
+                    }
+                    treeModel.reload(urlNode)
+                    articleTree.expandPath(TreePath(urlNode.path))
+                }
+
                 loadingLabel.text = "Loaded successfully!"
             } finally {
-                urlComboBox.isEnabled = true
                 delay(1500) // 短暂延迟后隐藏
                 loadingPanel.isVisible = false
             }
@@ -212,8 +304,8 @@ class RssToolWindowContent() {
         val urlsString = properties.getValue(RSS_URLS_KEY, "")
         if (urlsString.isNotBlank()) {
             urlsString.split(",").forEach { url ->
-                if (findUrlInComboBox(url) == -1) {
-                    urlComboBox.addItem(url)
+                if (!isUrlInTree(url)) {
+                    addUrlToTree(url)
                 }
             }
         }
@@ -221,35 +313,34 @@ class RssToolWindowContent() {
 
     private fun saveRssUrls() {
         val properties = PropertiesComponent.getInstance()
-        val urls = (0 until urlComboBox.itemCount).joinToString(",") { urlComboBox.getItemAt(it) }
+        val urls = (0 until rootNode.childCount).joinToString(",") {
+            (rootNode.getChildAt(it) as DefaultMutableTreeNode).userObject as String
+        }
         properties.setValue(RSS_URLS_KEY, urls)
     }
 
-    private fun findUrlInComboBox(url: String): Int {
-        for (i in 0 until urlComboBox.itemCount) {
-            if (urlComboBox.getItemAt(i) == url) {
-                return i
-            }
-        }
-        return -1
+    private fun isUrlInTree(url: String): Boolean {
+        return findNodeForUrl(url) != null
     }
 
-    private fun displayArticles(articles: List<RssArticle>) {
-        // 在事件调度线程上更新UI
-        EventQueue.invokeLater {
-            rootNode.removeAllChildren()
-            articles.forEach { article ->
-                val articleNode = DefaultMutableTreeNode(article.title)
-                articleNode.userObject = article
-                rootNode.add(articleNode)
+    private fun findNodeForUrl(url: String): DefaultMutableTreeNode? {
+        val enumeration = rootNode.children()
+        while (enumeration.hasMoreElements()) {
+            val node = enumeration.nextElement() as DefaultMutableTreeNode
+            if (node.userObject == url) {
+                return node
             }
-            treeModel.reload()
-            articleTree.expandRow(0) // 自动展开根节点
         }
+        return null
+    }
+
+    private fun addUrlToTree(url: String) {
+        val urlNode = DefaultMutableTreeNode(url)
+        urlNode.userObject = url // 将 URL 存储为用户对象
+        treeModel.insertNodeInto(urlNode, rootNode, rootNode.childCount)
     }
 
     fun getContent(): JBPanel<*> {
         return mainPanel
     }
 }
-

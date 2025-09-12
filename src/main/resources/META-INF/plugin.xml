@@ -18,7 +18,7 @@
             <br/>
             You can use this RSS reader to secretly view RSS feeds you want to see in IDEA, and support adding any RSS feeds you like.
             <br/>
-            你可以使用这个RSS阅读器在idea中隐秘的查看你想看到的RSS订阅信息, 支持添加任何你喜欢的RSS源1
+            你可以使用这个RSS阅读器在idea中隐秘的查看你想看到的RSS订阅信息, 支持添加任何你喜欢的RSS源
             <br/>
         ]]>
     </description>
@@ -33,6 +33,6 @@
         <toolWindow factoryClass="com.zongkx.yurss.MyToolWindowFactory"
                     id="YuRss"
                     anchor="right"
-                    icon="/icon.svg"/>
+                    icon="/rss.svg"/>
     </extensions>
 </idea-plugin>
