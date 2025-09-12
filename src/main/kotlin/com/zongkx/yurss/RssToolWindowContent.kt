@@ -19,6 +19,8 @@ import okhttp3.Response
 import java.awt.BorderLayout
 import java.awt.Dimension
 import java.awt.EventQueue
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
 import java.io.StringReader
 import javax.swing.*
 import javax.swing.event.DocumentEvent
@@ -96,7 +98,7 @@ class RssToolWindowContent() {
     private val rssService = RssService()
 
     // 根节点，现在将用于存储 RSS 订阅 URL
-    private val rootNode = DefaultMutableTreeNode("RSS Subscriptions")
+    private val rootNode = DefaultMutableTreeNode("RSS")
     private val treeModel = DefaultTreeModel(rootNode)
     private val articleTree = Tree(treeModel)
 
@@ -179,9 +181,52 @@ class RssToolWindowContent() {
                 }
             }
         }
-
+        // 设置内容区域
+        contentArea.lineWrap = true
+        contentArea.wrapStyleWord = true
+        contentArea.isEditable = false
+        // ***** 确保内容区域没有悬浮显示 *****
+        contentArea.toolTipText = null
         // 禁用树的 tooltip
         articleTree.toolTipText = null
+        // ***** 调整这里，取消缩进和连接线 *****
+        articleTree.showsRootHandles = false
+        articleTree.rowHeight = 24 // 可选：设置行高，让列表看起来更整洁
+        articleTree.putClientProperty("JTree.lineStyle", "None") // 移除连接线
+
+        // ***** 新增：为树添加右键菜单功能 *****
+        articleTree.addMouseListener(object : MouseAdapter() {
+            override fun mouseReleased(e: MouseEvent) {
+                if (SwingUtilities.isRightMouseButton(e)) {
+                    val path = articleTree.getPathForLocation(e.x, e.y)
+                    if (path != null) {
+                        val node = path.lastPathComponent as? DefaultMutableTreeNode
+                        // 确保选中的是顶级 URL 节点
+                        if (node != null && node.userObject is String) {
+                            val url = node.userObject as String
+                            val popupMenu = JPopupMenu()
+
+                            val deleteItem = JMenuItem("删除")
+                            deleteItem.addActionListener {
+                                treeModel.removeNodeFromParent(node)
+                                saveRssUrls()
+                                contentArea.text = "..."
+                            }
+
+                            val refreshItem = JMenuItem("刷新")
+                            refreshItem.addActionListener {
+                                loadRssFeed(url)
+                            }
+
+                            popupMenu.add(deleteItem)
+                            popupMenu.add(refreshItem)
+
+                            popupMenu.show(e.component, e.x, e.y)
+                        }
+                    }
+                }
+            }
+        })
 
         // 设置内容区域
         contentArea.lineWrap = true
@@ -236,6 +281,7 @@ class RssToolWindowContent() {
     }
 
     // 新增：显示联想建议的弹出菜单
+    // RssToolWindowContent 类内部
     private fun showSuggestions(query: String) {
         suggestionPopup.removeAll()
         if (query.isBlank()) {
@@ -246,7 +292,7 @@ class RssToolWindowContent() {
         val filteredUrls = allLocalUrls.filter {
             it["title"]?.contains(query, ignoreCase = true) ?: false ||
                     it["feedUrl"]?.contains(query, ignoreCase = true) ?: false
-        }.take(10) // 只显示前10个结果
+        }.take(10)
 
         if (filteredUrls.isNotEmpty()) {
             filteredUrls.forEach { urlMap ->
@@ -259,6 +305,9 @@ class RssToolWindowContent() {
                         addUrlTextField.text = url
                     }
                     suggestionPopup.isVisible = false // 隐藏弹出菜单
+
+                    // ***** 关键修改：重新请求焦点 *****
+                    addUrlTextField.requestFocusInWindow()
                 }
                 suggestionPopup.add(item)
             }
@@ -308,6 +357,14 @@ class RssToolWindowContent() {
                     addUrlToTree(url)
                 }
             }
+
+            // ***** 关键修改：自动展开所有顶级节点 *****
+            val enumeration = rootNode.children()
+            while (enumeration.hasMoreElements()) {
+                val node = enumeration.nextElement() as DefaultMutableTreeNode
+                val path = TreePath(node.path)
+                articleTree.expandPath(path)
+            }
         }
     }
 
@@ -338,6 +395,9 @@ class RssToolWindowContent() {
         val urlNode = DefaultMutableTreeNode(url)
         urlNode.userObject = url // 将 URL 存储为用户对象
         treeModel.insertNodeInto(urlNode, rootNode, rootNode.childCount)
+        // ***** 关键修改：获取新节点的路径并展开它 *****
+        val path = TreePath(urlNode.path)
+        articleTree.expandPath(path)
     }
 
     fun getContent(): JBPanel<*> {
