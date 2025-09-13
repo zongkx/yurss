@@ -1,74 +1,67 @@
 package com.zongkx.yurss
 
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
 import okhttp3.*
 import okhttp3.HttpUrl.Companion.toHttpUrl
-import okio.IOException
+import java.io.IOException
 import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicInteger
+
+val list: MutableList<MutableMap<String, String>> = mutableListOf()
 
 fun main() {
-    // 自定义 CookieJar 来管理 Cookie
-    // CookieJar 负责存储和加载 Cookie
-    val myCookieJar = object : CookieJar {
-        private val cookieStore: HashMap<String, MutableList<Cookie>> = HashMap()
-
-        @JvmName("saveFromResponseWithList")
-        fun saveFromResponse(url: HttpUrl, cookies: MutableList<Cookie>) {
-            // 将从响应中获取的 Cookie 存到内存中
-            cookieStore[url.host] = cookies
-        }
-
-        override fun loadForRequest(url: HttpUrl): MutableList<Cookie> {
-            // 加载请求所需的 Cookie
-            val cookies = cookieStore[url.host]
-            return cookies ?: ArrayList()
-        }
-
-        override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
-            TODO("Not yet implemented")
-        }
-    }
-
-    // 创建 OkHttpClient 实例，并设置自定义的 CookieJar
+    val atomicStart = AtomicInteger(0)
+    val limit = 199
+    val createCustomCookieJar = createCustomCookieJar()
     val client = OkHttpClient.Builder()
-        .cookieJar(myCookieJar)
+        .cookieJar(createCustomCookieJar)
         .connectTimeout(10, TimeUnit.SECONDS)
         .readTimeout(10, TimeUnit.SECONDS)
         .build()
+    // 初始请求
+    sendRequest(client, createCustomCookieJar, atomicStart.get(), limit, atomicStart)
+}
 
-    // 目标 URL
-    val targetUrl =
-        "https://www.qireader.com/api/search?query=%23All&language=zh&lastUpdateDays=30&startIndex=0&limit=25"
-
+fun cookie(httpUrl: HttpUrl, createCustomCookieJar: CookieJar) {
     // 创建需要设置的 Cookie
     val authCookie = Cookie.Builder()
         .name("qireader_auth")
-        .value("")
+        .value("basic cGJSZTVrcUpSdnFhbTB2eTpIZU5mYWRHVyE3ZFdEMzNweWw2bHZ2d3V1enhpbUVuQ0lQL3c9")
         .domain("www.qireader.com")
         .path("/")
         .build()
-    // 创建需要设置的第二个 Cookie
-    val authSigCookie = Cookie.Builder()
-        .name("qireader_auth.sig")
-        .value("")
-        .domain("www.qireader.com")
-        .path("/")
-        .build()
-    val authSigCookie2 = Cookie.Builder()
-        .name("qireader_user_id.sig")
-        .value("")
-        .domain("www.qireader.com")
-        .path("/")
-        .build()
+    createCustomCookieJar.saveFromResponse(httpUrl, mutableListOf(authCookie))
+
+}
+
+/**
+ * 封装发送请求的逻辑
+ *
+ * @param client OkHttp客户端
+ * @param start 起始页码
+ * @param limit 每页限制
+ * @param atomicStart 原子整型，用于安全地更新页码
+ */
+private fun sendRequest(
+    client: OkHttpClient,
+    createCustomCookieJar: CookieJar,
+    start: Int,
+    limit: Int,
+    atomicStart: AtomicInteger
+) {
+    val baseUrl = "https://www.qireader.com/api/search"
+    val httpUrl = buildUrl(baseUrl, start, limit)
     // 手动将 Cookie 添加到 CookieJar 中，以便后续请求使用
-    val httpUrl = targetUrl.toHttpUrl()
-    myCookieJar.saveFromResponse(httpUrl, mutableListOf(authCookie, authSigCookie, authSigCookie2))
 
-    // 创建 GET 请求
     val request = Request.Builder()
-        .url(targetUrl)
+        .url(httpUrl)
         .build()
 
-    // 发送请求并处理响应
+    println("正在请求 startIndex=$start 的数据...")
+    cookie(httpUrl, createCustomCookieJar)
     client.newCall(request).enqueue(object : Callback {
         override fun onFailure(call: Call, e: IOException) {
             e.printStackTrace()
@@ -81,11 +74,62 @@ fun main() {
                     throw IOException("Unexpected code $response")
                 }
 
-                val responseBody = response.body?.string()
-                println("请求成功，响应体:")
-                println(responseBody)
+                val jsonString = response.body?.string().toString()
+                val jsonElement = Json.parseToJsonElement(jsonString)
+                val rootObject = jsonElement.jsonObject
+
+                // 3. 安全地导航并提取数据
+                val resultObject = rootObject["result"]?.jsonObject
+                val feedsArray = resultObject?.get("feeds")?.jsonArray
+                val hasNextPage = resultObject?.get("hasNextPage")?.toString().equals("true")
+
+                feedsArray?.forEach { a ->
+                    val map: MutableMap<String, String> = mutableMapOf()
+                    val feedObject = a.jsonObject["feed"]?.jsonObject
+                    val title = feedObject?.get("title")?.toString()?.removeSurrounding("\"")
+                    val feedUrl = feedObject?.get("feedUrl")?.toString()?.removeSurrounding("\"")
+
+                    map["title"] = title ?: ""
+                    map["feedUrl"] = feedUrl ?: ""
+                    list.add(map)
+                }
+
+                if (hasNextPage) {
+                    // 如果还有下一页，递归调用 sendRequest，并递增页码
+                    val nextStart = atomicStart.incrementAndGet() * limit
+                    sendRequest(client, createCustomCookieJar, nextStart, limit, atomicStart)
+                } else {
+                    println("所有数据已获取完毕，退出循环.")
+                    println(Json.encodeToString(list))
+                }
             }
         }
     })
 }
 
+private fun createCustomCookieJar(): CookieJar {
+    return object : CookieJar {
+        private val cookieStore: HashMap<String, MutableList<Cookie>> = HashMap()
+
+        override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
+            // 将从响应中获取的 Cookie 存到内存中
+            cookieStore[url.host] = cookies.toMutableList()
+        }
+
+        override fun loadForRequest(url: HttpUrl): MutableList<Cookie> {
+            // 加载请求所需的 Cookie
+            val cookies = cookieStore[url.host]
+            return cookies ?: ArrayList()
+        }
+    }
+}
+
+private fun buildUrl(baseUrl: String, start: Int, limit: Int): HttpUrl {
+    return baseUrl.toHttpUrl().newBuilder()
+        .addQueryParameter("query", "#All")
+        .addQueryParameter("language", "en")
+        .addQueryParameter("lastUpdateDays", "30")
+        .addQueryParameter("startIndex", start.toString())
+        .addQueryParameter("limit", limit.toString())
+        .build()
+}

@@ -21,6 +21,7 @@ dependencies {
         create("IC", "2025.1")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
     }
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3") // Or the latest version
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.rometools:rome:1.18.0")
     implementation("com.rometools:rome-modules:1.18.0")

@@ -56,10 +56,20 @@ class RssToolWindowContent() {
         isFocusPainted = false
     }
 
+    private val languageButton = JButton(MyIcons.EN).apply {
+        preferredSize = Dimension(24, 24)
+        border = BorderFactory.createEmptyBorder()
+        isBorderPainted = false
+        isContentAreaFilled = false
+        isFocusPainted = false
+    }
+
     private val addUrlTextField = JTextField()
     private val suggestionPopup = JPopupMenu()
 
     private var allLocalUrls: List<Map<String, String>> = emptyList()
+
+    private var currentLanguage = "zh"
 
     companion object {
         private const val RSS_DATA_KEY = "my.rss.plugin.data"
@@ -70,10 +80,17 @@ class RssToolWindowContent() {
         urlInputPanel.add(addUrlTextField, BorderLayout.CENTER)
         val buttonPanel = JBPanel<JBPanel<*>>()
         buttonPanel.add(addButton)
+        buttonPanel.add(languageButton)
         urlInputPanel.add(buttonPanel, BorderLayout.EAST)
 
         val topPanel = JBPanel<JBPanel<*>>(BorderLayout())
         topPanel.add(urlInputPanel, BorderLayout.NORTH)
+
+        languageButton.addActionListener {
+            currentLanguage = if (currentLanguage == "zh") "en" else "zh"
+            languageButton.icon = if (currentLanguage == "zh") MyIcons.CN else MyIcons.EN
+            loadLocalRssFile()
+        }
 
         loadSavedRssUrls()
 
@@ -151,13 +168,13 @@ class RssToolWindowContent() {
                                     JOptionPane.QUESTION_MESSAGE,
                                     null,
                                     null,
-                                    rssNode.title // 使用 RssNode 的 title 作为默认值
+                                    rssNode.title
                                 ) as String?
 
                                 if (!newTitle.isNullOrBlank()) {
-                                    rssNode.title = newTitle // 只修改 RssNode 对象的 title 属性
-                                    treeModel.nodeChanged(node) // 通知树模型节点已改变
-                                    saveRssUrls() // 保存更改
+                                    rssNode.title = newTitle
+                                    treeModel.nodeChanged(node)
+                                    saveRssUrls()
                                 }
                             }
 
@@ -192,9 +209,9 @@ class RssToolWindowContent() {
     private fun loadLocalRssFile() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val fileName = "rss.json"
+                val fileName = if (currentLanguage == "en") "rss-en.json" else "rss.json"
                 val inputStream = object {}.javaClass.getResourceAsStream("/$fileName")
-                    ?: throw IllegalArgumentException("文件未找到: $fileName")
+                    ?: throw IllegalArgumentException("No File: $fileName")
                 val content = inputStream.bufferedReader().use { it.readText() }
                 val jsonElement = Json.parseToJsonElement(content)
                 if (jsonElement is JsonArray) {
@@ -292,7 +309,7 @@ class RssToolWindowContent() {
         val enumeration = rootNode.children()
         while (enumeration.hasMoreElements()) {
             val node = enumeration.nextElement() as DefaultMutableTreeNode
-            val rssNode = node.userObject as RssNode // 将 userObject 转换为 RssNode 对象
+            val rssNode = node.userObject as RssNode
             val url = rssNode.feedUrl
             val title = rssNode.title
             data.add("$url|$title")

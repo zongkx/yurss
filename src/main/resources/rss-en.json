@@ -1,0 +1,2694 @@
+[
+  {
+    "title": "Bustle",
+    "feedUrl": "https://www.bustle.com/rss"
+  },
+  {
+    "title": "Dazed",
+    "feedUrl": "https://www.dazeddigital.com/rss"
+  },
+  {
+    "title": "The Verge",
+    "feedUrl": "https://www.theverge.com/rss/full.xml"
+  },
+  {
+    "title": "Vox",
+    "feedUrl": "https://www.vox.com/rss/index.xml"
+  },
+  {
+    "title": "Daring Fireball",
+    "feedUrl": "https://daringfireball.net/feeds/json"
+  },
+  {
+    "title": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics",
+    "feedUrl": "https://www.engadget.com/rss.xml"
+  },
+  {
+    "title": "Hacker News",
+    "feedUrl": "https://news.ycombinator.com/rss"
+  },
+  {
+    "title": "MIT Technology Review",
+    "feedUrl": "https://www.technologyreview.com/feed/"
+  },
+  {
+    "title": "TechNode",
+    "feedUrl": "https://technode.com/feed/"
+  },
+  {
+    "title": "Colossal",
+    "feedUrl": "https://www.thisiscolossal.com/feed"
+  },
+  {
+    "title": "Six Colors",
+    "feedUrl": "https://sixcolors.com/?feed=json"
+  },
+  {
+    "title": "Bored Panda",
+    "feedUrl": "https://www.boredpanda.com/feed"
+  },
+  {
+    "title": "The Keyword",
+    "feedUrl": "https://blog.google/rss/"
+  },
+  {
+    "title": "Lifehacker",
+    "feedUrl": "https://lifehacker.com/feed/rss"
+  },
+  {
+    "title": "CSS-Tricks",
+    "feedUrl": "https://css-tricks.com/feed"
+  },
+  {
+    "title": "The Loadstar",
+    "feedUrl": "https://theloadstar.com/feed"
+  },
+  {
+    "title": "Gizmodo",
+    "feedUrl": "https://gizmodo.com/rss"
+  },
+  {
+    "title": "DEV Community",
+    "feedUrl": "https://dev.to/feed"
+  },
+  {
+    "title": "InfoQ",
+    "feedUrl": "https://feed.infoq.com"
+  },
+  {
+    "title": "Cointelegraph.com News",
+    "feedUrl": "https://cointelegraph.com/rss"
+  },
+  {
+    "title": "The Onion",
+    "feedUrl": "https://www.theonion.com/rss"
+  },
+  {
+    "title": "Batteries News",
+    "feedUrl": "https://batteriesnews.com/feed/"
+  },
+  {
+    "title": "ComingSoon.net – Movie Trailers, TV & Streaming News, and More",
+    "feedUrl": "https://www.comingsoon.net/feed"
+  },
+  {
+    "title": "Business Insider",
+    "feedUrl": "https://feeds2.feedburner.com/businessinsider"
+  },
+  {
+    "title": "Forbes - Business",
+    "feedUrl": "https://www.forbes.com/business/feed"
+  },
+  {
+    "title": "NPR Topics: News",
+    "feedUrl": "https://feeds.npr.org/1001/rss.xml"
+  },
+  {
+    "title": "Quartz",
+    "feedUrl": "https://cms.qz.com/feed"
+  },
+  {
+    "title": "The Atlantic",
+    "feedUrl": "https://feeds.feedburner.com/TheAtlantic"
+  },
+  {
+    "title": "English - VICE",
+    "feedUrl": "https://www.vice.com/en/rss?locale=en_us"
+  },
+  {
+    "title": "Variety",
+    "feedUrl": "https://variety.com/feed"
+  },
+  {
+    "title": "BBC/Top Stories",
+    "feedUrl": "https://plink.anyfeeder.com/bbc"
+  },
+  {
+    "title": "BBC/Business",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/business"
+  },
+  {
+    "title": "BBC/Entertainment & Arts",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/entertainment_and_arts"
+  },
+  {
+    "title": "BBC/Health",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/health"
+  },
+  {
+    "title": "BBC/Politics",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/politics"
+  },
+  {
+    "title": "BBC/Technology",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/technology"
+  },
+  {
+    "title": "BBC/UK",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/uk"
+  },
+  {
+    "title": "BBC/World",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/world"
+  },
+  {
+    "title": "Ars Technica - All content",
+    "feedUrl": "https://feeds.arstechnica.com/arstechnica/index"
+  },
+  {
+    "title": "Aeon | a world of ideas",
+    "feedUrl": "https://aeon.co/feed.rss"
+  },
+  {
+    "title": "TIME",
+    "feedUrl": "https://plink.anyfeeder.com/time"
+  },
+  {
+    "title": "The New Yorker",
+    "feedUrl": "https://feedx.net/rss/newyorker.xml"
+  },
+  {
+    "title": "WIRED",
+    "feedUrl": "https://www.wired.com/feed/rss"
+  },
+  {
+    "title": "ByteByteGo Newsletter",
+    "feedUrl": "https://blog.bytebytego.com/feed"
+  },
+  {
+    "title": "All Content from Business Insider",
+    "feedUrl": "https://feeds.businessinsider.com/custom/all"
+  },
+  {
+    "title": "Nature",
+    "feedUrl": "https://www.nature.com/nature.rss"
+  },
+  {
+    "title": "Nature Communications",
+    "feedUrl": "https://www.nature.com/ncomms.rss"
+  },
+  {
+    "title": "BBC/Education & Family",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/education"
+  },
+  {
+    "title": "BBC/Science & Environment",
+    "feedUrl": "https://plink.anyfeeder.com/bbc/science_and_environment"
+  },
+  {
+    "title": "Marginal Revolution",
+    "feedUrl": "https://feeds.feedblitz.com/marginalrevolution&x=1"
+  },
+  {
+    "title": "Science News",
+    "feedUrl": "https://www.sciencenews.org/feed"
+  },
+  {
+    "title": "Longreads",
+    "feedUrl": "https://plink.anyfeeder.com/longreads"
+  },
+  {
+    "title": "Xiaoxiao's Weblog",
+    "feedUrl": "https://liuyuntian.com/feed"
+  },
+  {
+    "title": "Latest & Breaking News on Fox News",
+    "feedUrl": "https://moxie.foxnews.com/google-publisher/latest.xml"
+  },
+  {
+    "title": "The GitHub Blog",
+    "feedUrl": "https://github.blog/feed/"
+  },
+  {
+    "title": "Last Week in AI",
+    "feedUrl": "https://lastweekin.ai/feed"
+  },
+  {
+    "title": "TechCrunch",
+    "feedUrl": "https://rsshub.app/techcrunch/news"
+  },
+  {
+    "title": "Psyche | Know Your Self",
+    "feedUrl": "https://psyche.co/feed.rss"
+  },
+  {
+    "title": "Fast Company",
+    "feedUrl": "https://www.fastcompany.com/latest/rss"
+  },
+  {
+    "title": "Automotive Dive - Latest News",
+    "feedUrl": "https://www.automotivedive.com/feeds/news/"
+  },
+  {
+    "title": "The Loop",
+    "feedUrl": "https://www.loopinsight.com/feed"
+  },
+  {
+    "title": "Associated Press",
+    "feedUrl": "https://feedx.net/rss/ap.xml"
+  },
+  {
+    "title": "MacRumors: Mac News and Rumors - All Stories",
+    "feedUrl": "https://feeds.macrumors.com/MacRumors-All"
+  },
+  {
+    "title": "Feed: All Latest",
+    "feedUrl": "https://www.wired.com/feed"
+  },
+  {
+    "title": "AAAS: Science Advances: Table of Contents",
+    "feedUrl": "https://www.science.org/action/showFeed?feed=rss&jc=sciadv&type=etoc"
+  },
+  {
+    "title": "南华早报",
+    "feedUrl": "https://feedx.net/rss/scmp.xml"
+  },
+  {
+    "title": "GitHub All Languages Daily Trending",
+    "feedUrl": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
+  },
+  {
+    "title": "Supply Chain Dive - Latest News",
+    "feedUrl": "https://www.supplychaindive.com/feeds/news"
+  },
+  {
+    "title": "FreightWaves",
+    "feedUrl": "https://feeds.feedburner.com/Freightwaves"
+  },
+  {
+    "title": "Slashdot",
+    "feedUrl": "https://rss.slashdot.org/Slashdot/slashdotMain"
+  },
+  {
+    "title": "HackerNoon",
+    "feedUrl": "https://hackernoon.com/feed"
+  },
+  {
+    "title": "ZeroHedge News",
+    "feedUrl": "https://plink.anyfeeder.com/zerohedge"
+  },
+  {
+    "title": "Vogue",
+    "feedUrl": "https://www.vogue.com/feed/rss"
+  },
+  {
+    "title": "AAAS: Science: Table of Contents",
+    "feedUrl": "https://www.science.org/action/showFeed?feed=rss&jc=science&type=etoc"
+  },
+  {
+    "title": "World News",
+    "feedUrl": "https://www.reddit.com/r/worldnews/.rss"
+  },
+  {
+    "title": "Container News",
+    "feedUrl": "https://container-news.com/feed"
+  },
+  {
+    "title": "Wiley: Angewandte Chemie International Edition: Table of Contents",
+    "feedUrl": "https://onlinelibrary.wiley.com/feed/15213773/most-recent"
+  },
+  {
+    "title": "The Cloudflare Blog",
+    "feedUrl": "https://blog.cloudflare.com/rss"
+  },
+  {
+    "title": "Michael Tsai",
+    "feedUrl": "https://mjtsai.com/blog/feed/"
+  },
+  {
+    "title": "Android Authority",
+    "feedUrl": "https://www.androidauthority.com/feed/"
+  },
+  {
+    "title": "spiked",
+    "feedUrl": "https://www.spiked-online.com/feed/"
+  },
+  {
+    "title": "9to5Mac",
+    "feedUrl": "https://9to5mac.com/feed/"
+  },
+  {
+    "title": "The New Stack | DevOps, Open Source, and Cloud Native News",
+    "feedUrl": "https://thenewstack.io/blog/feed/"
+  },
+  {
+    "title": "BleepingComputer",
+    "feedUrl": "https://www.bleepingcomputer.com/feed/"
+  },
+  {
+    "title": "RT - Daily news",
+    "feedUrl": "https://www.rt.com/rss/"
+  },
+  {
+    "title": "China",
+    "feedUrl": "https://www.cgtn.com/subscribe/rss/section/china.xml"
+  },
+  {
+    "title": "World",
+    "feedUrl": "https://www.cgtn.com/subscribe/rss/section/world.xml"
+  },
+  {
+    "title": "Foreign Policy",
+    "feedUrl": "https://foreignpolicy.com/feed/"
+  },
+  {
+    "title": "Sixth Tone RSS",
+    "feedUrl": "https://api.sixthtone.com/cont/output/rssApi"
+  },
+  {
+    "title": "Phoronix",
+    "feedUrl": "https://www.phoronix.com/rss.php"
+  },
+  {
+    "title": "cs.AI updates on arXiv.org",
+    "feedUrl": "https://rss.arxiv.org/rss/cs.AI"
+  },
+  {
+    "title": "Hackaday",
+    "feedUrl": "https://hackaday.com/feed/"
+  },
+  {
+    "title": "Artificial Intelligence",
+    "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/"
+  },
+  {
+    "title": "The Hollywood Reporter",
+    "feedUrl": "https://www.hollywoodreporter.com/feed/"
+  },
+  {
+    "title": "Electrek",
+    "feedUrl": "https://electrek.co/feed/"
+  },
+  {
+    "title": "English news and easy articles for students of English",
+    "feedUrl": "https://www.newsinlevels.com/feed/"
+  },
+  {
+    "title": "Polygon.com",
+    "feedUrl": "https://www.polygon.com/rss/index.xml"
+  },
+  {
+    "title": "Kotaku",
+    "feedUrl": "https://kotaku.com/rss"
+  },
+  {
+    "title": "Deadline",
+    "feedUrl": "https://deadline.com/feed/"
+  },
+  {
+    "title": "TV Fanatic",
+    "feedUrl": "https://www.tvfanatic.com/feed/"
+  },
+  {
+    "title": "MIT News",
+    "feedUrl": "https://news.mit.edu/rss/feed"
+  },
+  {
+    "title": "Refinery29",
+    "feedUrl": "https://www.refinery29.com/rss.xml"
+  },
+  {
+    "title": "Cloud Blog",
+    "feedUrl": "https://cloudblog.withgoogle.com/rss"
+  },
+  {
+    "title": "Axios",
+    "feedUrl": "https://api.axios.com/feed"
+  },
+  {
+    "title": "AI-Tech Park",
+    "feedUrl": "https://ai-techpark.com/feed/"
+  },
+  {
+    "title": "/Film - Movie & TV News, Trailers, Interviews, & Reviews",
+    "feedUrl": "https://www.slashfilm.com/feed/"
+  },
+  {
+    "title": "Pharmaceutical Technology",
+    "feedUrl": "https://www.pharmaceutical-technology.com/feed/"
+  },
+  {
+    "title": "Clinical Trials Arena",
+    "feedUrl": "https://www.clinicaltrialsarena.com/feed/"
+  },
+  {
+    "title": "Latest Business News on Fox Business",
+    "feedUrl": "https://moxie.foxbusiness.com/google-publisher/latest.xml"
+  },
+  {
+    "title": "NYT > Business",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"
+  },
+  {
+    "title": "NYT > Technology",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+  },
+  {
+    "title": "NYT > Top Stories",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  },
+  {
+    "title": "The Guardian",
+    "feedUrl": "https://www.theguardian.com/uk/rss"
+  },
+  {
+    "title": "果壳网 科学人",
+    "feedUrl": "https://plink.anyfeeder.com/guokr/scientific"
+  },
+  {
+    "title": "TED Talks Daily",
+    "feedUrl": "https://pa.tedcdn.com/feeds/talks.rss"
+  },
+  {
+    "title": "Josh Comeau's blog",
+    "feedUrl": "https://www.joshwcomeau.com/rss.xml"
+  },
+  {
+    "title": "China | The Guardian",
+    "feedUrl": "https://feeds.theguardian.com/theguardian/world/china/rss"
+  },
+  {
+    "title": "News - South China Morning Post",
+    "feedUrl": "https://www.scmp.com/rss/91/feed"
+  },
+  {
+    "title": "ProPublica",
+    "feedUrl": "https://www.propublica.org/feeds/propublica/main"
+  },
+  {
+    "title": "NYT > World > Asia Pacific",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml"
+  },
+  {
+    "title": "China - South China Morning Post",
+    "feedUrl": "https://www.scmp.com/rss/4/feed"
+  },
+  {
+    "title": "The JetBrains Blog",
+    "feedUrl": "https://blog.jetbrains.com/feed"
+  },
+  {
+    "title": "BBC News",
+    "feedUrl": "https://feeds.bbci.co.uk/news/rss.xml"
+  },
+  {
+    "title": "Hugging Face - Blog",
+    "feedUrl": "https://huggingface.co/blog/feed.xml"
+  },
+  {
+    "title": "Spring",
+    "feedUrl": "https://spring.io/blog.atom"
+  },
+  {
+    "title": "Hacker News Daily",
+    "feedUrl": "https://www.daemonology.net/hn-daily/index.rss"
+  },
+  {
+    "title": "NYT > World News",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+  },
+  {
+    "title": "World news | The Guardian",
+    "feedUrl": "https://www.theguardian.com/world/rss"
+  },
+  {
+    "title": "Asia News",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=19832390&partnerId=wrss01"
+  },
+  {
+    "title": "Business News",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=10001147&partnerId=wrss01"
+  },
+  {
+    "title": "International: Top News And Analysis",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=100727362&partnerId=wrss01"
+  },
+  {
+    "title": "MacStories",
+    "feedUrl": "https://www.macstories.net/feed/"
+  },
+  {
+    "title": "Scientific American",
+    "feedUrl": "https://www.scientificamerican.com/platform/syndication/rss"
+  },
+  {
+    "title": "WSJ.com: World News",
+    "feedUrl": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews"
+  },
+  {
+    "title": "JavaScript Weekly",
+    "feedUrl": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
+  },
+  {
+    "title": "月球背面",
+    "feedUrl": "https://moonvy.com/blog/rss.xml"
+  },
+  {
+    "title": "This Week In React - Newsletter",
+    "feedUrl": "https://thisweekinreact.com/newsletter/rss.xml"
+  },
+  {
+    "title": "Vulture",
+    "feedUrl": "https://www.vulture.com/feeds/flipboard.rss"
+  },
+  {
+    "title": "neverland",
+    "feedUrl": "https://type.cyhsu.xyz/feed.xml"
+  },
+  {
+    "title": "Martin Fowler",
+    "feedUrl": "https://martinfowler.com/feed.atom"
+  },
+  {
+    "title": "Everything",
+    "feedUrl": "https://www.newyorker.com/feed/everything"
+  },
+  {
+    "title": "World News | Latest Top Stories | Reuters",
+    "feedUrl": "https://rsshub.app/reuters/world"
+  },
+  {
+    "title": "Daily Productivity Sharing",
+    "feedUrl": "https://letters.acacess.com/rss"
+  },
+  {
+    "title": "The Marginalian",
+    "feedUrl": "https://feeds.feedburner.com/brainpickings/rss"
+  },
+  {
+    "title": "Sam Altman",
+    "feedUrl": "https://blog.samaltman.com/posts.atom"
+  },
+  {
+    "title": "News Minimalist",
+    "feedUrl": "https://rss.beehiiv.com/feeds/4aF2pGVAEN.xml"
+  },
+  {
+    "title": "Quanta Magazine",
+    "feedUrl": "https://api.quantamagazine.org/feed/"
+  },
+  {
+    "title": "Stratechery by Ben Thompson",
+    "feedUrl": "https://stratechery.com/feed/"
+  },
+  {
+    "title": "Social Science Space",
+    "feedUrl": "https://www.socialsciencespace.com/feed/"
+  },
+  {
+    "title": "US Top News and Analysis",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=100003114&partnerId=wrss01"
+  },
+  {
+    "title": "It's FOSS",
+    "feedUrl": "https://itsfoss.com/rss/"
+  },
+  {
+    "title": "Bloomberg Technology",
+    "feedUrl": "https://feeds.bloomberg.com/technology/news.rss"
+  },
+  {
+    "title": "Noahpinion",
+    "feedUrl": "https://www.noahpinion.blog/feed"
+  },
+  {
+    "title": "Nature Methods",
+    "feedUrl": "https://www.nature.com/nmeth.rss"
+  },
+  {
+    "title": "Nature Materials",
+    "feedUrl": "https://www.nature.com/nmat.rss"
+  },
+  {
+    "title": "Entrepreneur",
+    "feedUrl": "https://www.entrepreneur.com/latest.rss"
+  },
+  {
+    "title": "Economist Podcasts",
+    "feedUrl": "https://access.acast.com/rss/ec380acc-fe13-46a0-991f-a1e508d126f8"
+  },
+  {
+    "title": "Bloomberg.com",
+    "feedUrl": "https://feeds.bloomberg.com/business/news.rss"
+  },
+  {
+    "title": "bytes.dev",
+    "feedUrl": "https://kill-the-newsletter.com/feeds/t59kuewkmrffe1jw1q3q.xml"
+  },
+  {
+    "title": "Business | The Guardian",
+    "feedUrl": "https://www.theguardian.com/uk/business/rss"
+  },
+  {
+    "title": "Investopedia | Expert Financial Advice and Markets News",
+    "feedUrl": "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff"
+  },
+  {
+    "title": "Node Weekly",
+    "feedUrl": "https://cprss.s3.amazonaws.com/nodeweekly.com.xml"
+  },
+  {
+    "title": "React Status",
+    "feedUrl": "https://cprss.s3.amazonaws.com/react.statuscode.com.xml"
+  },
+  {
+    "title": "McKinsey Insights & Publications",
+    "feedUrl": "https://www.mckinsey.com/insights/rss"
+  },
+  {
+    "title": "Hacker News: Front Page",
+    "feedUrl": "https://hnrss.org/frontpage"
+  },
+  {
+    "title": "Ars Technica",
+    "feedUrl": "https://arstechnica.com/feed"
+  },
+  {
+    "title": "Not Boring by Packy McCormick",
+    "feedUrl": "https://www.notboring.co/feed"
+  },
+  {
+    "title": "Overcoming Bias",
+    "feedUrl": "https://www.overcomingbias.com/feed"
+  },
+  {
+    "title": "Wiley: Advanced Materials: Table of Contents",
+    "feedUrl": "https://onlinelibrary.wiley.com/feed/15214095/most-recent"
+  },
+  {
+    "title": "The Hacker News",
+    "feedUrl": "https://feeds.feedburner.com/TheHackersNews"
+  },
+  {
+    "title": "LessWrong",
+    "feedUrl": "https://www.lesswrong.com/feed.xml?view=curated-rss"
+  },
+  {
+    "title": "Articles on Smashing Magazine — For Web Designers And Developers",
+    "feedUrl": "https://www.smashingmagazine.com/feed"
+  },
+  {
+    "title": "ShippingWatch - Latest News",
+    "feedUrl": "https://rss-feed-api.aws.jyllands-posten.dk/shippingwatch.com/latest"
+  },
+  {
+    "title": "Knowable Magazine",
+    "feedUrl": "https://knowablemagazine.org/rss"
+  },
+  {
+    "title": "Yanko Design",
+    "feedUrl": "https://www.yankodesign.com/feed"
+  },
+  {
+    "title": "Finance & economics",
+    "feedUrl": "https://www.economist.com/finance-and-economics/rss.xml"
+  },
+  {
+    "title": "Hacker News: Newest",
+    "feedUrl": "https://hnrss.org/newest"
+  },
+  {
+    "title": "MacRumors: Mac News and Rumors - Front Page",
+    "feedUrl": "https://feeds.macrumors.com/MacRumors-Front"
+  },
+  {
+    "title": "World - South China Morning Post",
+    "feedUrl": "https://www.scmp.com/rss/5/feed"
+  },
+  {
+    "title": "Latest from Android Central",
+    "feedUrl": "https://www.androidcentral.com/rss.xml"
+  },
+  {
+    "title": "Kubernetes Blog",
+    "feedUrl": "https://kubernetes.io/feed.xml"
+  },
+  {
+    "title": "ABC News: Top Stories",
+    "feedUrl": "https://abcnews.go.com/abcnews/topstories"
+  },
+  {
+    "title": "NASA",
+    "feedUrl": "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+  },
+  {
+    "title": "Latest Science News -- ScienceDaily",
+    "feedUrl": "https://www.sciencedaily.com/rss/all.xml"
+  },
+  {
+    "title": "Latest World News on Fox News",
+    "feedUrl": "https://moxie.foxnews.com/google-publisher/world.xml"
+  },
+  {
+    "title": "David Heinemeier Hansson",
+    "feedUrl": "https://world.hey.com/dhh/feed.atom"
+  },
+  {
+    "title": "Ship & Bunker",
+    "feedUrl": "https://feeds.feedburner.com/shipandbunker"
+  },
+  {
+    "title": "LangChain Blog",
+    "feedUrl": "https://blog.langchain.dev/rss"
+  },
+  {
+    "title": "Boing Boing",
+    "feedUrl": "https://boingboing.net/feed"
+  },
+  {
+    "title": "Simon Willison's Weblog",
+    "feedUrl": "https://simonwillison.net/atom/everything"
+  },
+  {
+    "title": "SpaceNews",
+    "feedUrl": "https://spacenews.com/feed/"
+  },
+  {
+    "title": "USNI News",
+    "feedUrl": "https://news.usni.org/feed"
+  },
+  {
+    "title": "Hacker News: Best Comments",
+    "feedUrl": "https://hnrss.org/bestcomments"
+  },
+  {
+    "title": "Hacker News Summary",
+    "feedUrl": "https://hackernews.betacat.io/feed.xml"
+  },
+  {
+    "title": "9to5Google",
+    "feedUrl": "https://9to5google.com/feed/"
+  },
+  {
+    "title": "kottke.org",
+    "feedUrl": "https://feeds.kottke.org/main"
+  },
+  {
+    "title": "Wiley: Advanced Functional Materials: Table of Contents",
+    "feedUrl": "https://onlinelibrary.wiley.com/feed/16163028/most-recent"
+  },
+  {
+    "title": "EE Times",
+    "feedUrl": "https://www.eetimes.com/feed/"
+  },
+  {
+    "title": "Popular Science",
+    "feedUrl": "https://www.popsci.com/feed/"
+  },
+  {
+    "title": "Droid Life | Opinionated Android news.",
+    "feedUrl": "https://www.droid-life.com/feed/"
+  },
+  {
+    "title": "Techmeme",
+    "feedUrl": "https://www.techmeme.com/feed.xml"
+  },
+  {
+    "title": "404 Media",
+    "feedUrl": "https://www.404media.co/rss/"
+  },
+  {
+    "title": "Daily CyberSecurity",
+    "feedUrl": "https://securityonline.info/feed/"
+  },
+  {
+    "title": "The Drive",
+    "feedUrl": "https://www.thedrive.com/feed"
+  },
+  {
+    "title": "Engineering at Meta",
+    "feedUrl": "https://engineering.fb.com/feed/"
+  },
+  {
+    "title": "Huggingface Daily Papers",
+    "feedUrl": "https://rsshub.app/huggingface/daily-papers"
+  },
+  {
+    "title": "Docker",
+    "feedUrl": "https://www.docker.com/feed/"
+  },
+  {
+    "title": "PCWorld",
+    "feedUrl": "https://www.pcworld.com/feed"
+  },
+  {
+    "title": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+    "feedUrl": "https://www.aljazeera.com/xml/rss/all.xml"
+  },
+  {
+    "title": "Fortune | FORTUNE",
+    "feedUrl": "https://fortune.com/feed/fortune-feeds/?id=3230629"
+  },
+  {
+    "title": "RT World News",
+    "feedUrl": "https://www.rt.com/rss/news/"
+  },
+  {
+    "title": "TASS",
+    "feedUrl": "https://tass.com/rss/v2.xml"
+  },
+  {
+    "title": "Krebs on Security",
+    "feedUrl": "https://krebsonsecurity.com/feed/"
+  },
+  {
+    "title": "Top News: US & International Top News Stories Today | AP News",
+    "feedUrl": "https://rsshub.app/apnews/topics/apf-topnews"
+  },
+  {
+    "title": "U.S. News Today on Fox News",
+    "feedUrl": "https://moxie.foxnews.com/google-publisher/us.xml"
+  },
+  {
+    "title": "Bloomberg Markets",
+    "feedUrl": "https://feeds.bloomberg.com/markets/news.rss"
+  },
+  {
+    "title": "Nature Chemistry",
+    "feedUrl": "https://www.nature.com/nchem.rss"
+  },
+  {
+    "title": "CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data",
+    "feedUrl": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "title": "Universe Today",
+    "feedUrl": "https://www.universetoday.com/feed/"
+  },
+  {
+    "title": "Nature Medicine",
+    "feedUrl": "https://www.nature.com/nm.rss"
+  },
+  {
+    "title": "ABC News: International",
+    "feedUrl": "https://abcnews.go.com/abcnews/internationalheadlines"
+  },
+  {
+    "title": "Artificial Intelligence (AI)",
+    "feedUrl": "https://www.reddit.com/r/artificial/.rss"
+  },
+  {
+    "title": "AppleInsider News",
+    "feedUrl": "https://appleinsider.com/rss/news"
+  },
+  {
+    "title": "Nature Reviews Cancer",
+    "feedUrl": "https://www.nature.com/nrc.rss"
+  },
+  {
+    "title": "The Lancet",
+    "feedUrl": "https://www.thelancet.com/rssfeed/lancet_current.xml"
+  },
+  {
+    "title": "The Latest Top Headlines on China - Caixin Global",
+    "feedUrl": "https://rsshub.rssforever.com/caixinglobal/latest"
+  },
+  {
+    "title": "cs.CV updates on arXiv.org",
+    "feedUrl": "https://rss.arxiv.org/rss/cs.CV"
+  },
+  {
+    "title": "cs.LG updates on arXiv.org",
+    "feedUrl": "https://rss.arxiv.org/rss/cs.LG"
+  },
+  {
+    "title": "Politics",
+    "feedUrl": "https://rss.politico.com/politics-news.xml"
+  },
+  {
+    "title": "Visual Capitalist",
+    "feedUrl": "https://www.visualcapitalist.com/feed/"
+  },
+  {
+    "title": "Culture",
+    "feedUrl": "https://www.cgtn.com/subscribe/rss/section/culture.xml"
+  },
+  {
+    "title": "Lobsters",
+    "feedUrl": "https://lobste.rs/rss"
+  },
+  {
+    "title": "Latest from TechRadar",
+    "feedUrl": "https://www.techradar.com/feeds.xml"
+  },
+  {
+    "title": "The Gospel Coalition",
+    "feedUrl": "https://www.thegospelcoalition.org/feed/"
+  },
+  {
+    "title": "The War Zone",
+    "feedUrl": "https://www.twz.com/feed"
+  },
+  {
+    "title": "Cyber Security News",
+    "feedUrl": "https://cybersecuritynews.com/feed/"
+  },
+  {
+    "title": "Bloomberg Economics",
+    "feedUrl": "https://feeds.bloomberg.com/economics/news.rss"
+  },
+  {
+    "title": "纽约客",
+    "feedUrl": "https://newyorker.buzzing.cc/feed.xml"
+  },
+  {
+    "title": "Hong Kong Free Press HKFP",
+    "feedUrl": "https://hongkongfp.com/feed/"
+  },
+  {
+    "title": "Bloomberg Opinion",
+    "feedUrl": "https://feeds.bloomberg.com/bview/news.rss"
+  },
+  {
+    "title": "Bitcoin Magazine",
+    "feedUrl": "https://bitcoinmagazine.com/.rss/full/"
+  },
+  {
+    "title": "Eurogamer.net Latest Articles Feed",
+    "feedUrl": "https://www.eurogamer.net/feed"
+  },
+  {
+    "title": "TVLine",
+    "feedUrl": "https://tvline.com/feed/"
+  },
+  {
+    "title": "Bloomberg Politics",
+    "feedUrl": "https://feeds.bloomberg.com/politics/news.rss"
+  },
+  {
+    "title": "Nikkei Asia",
+    "feedUrl": "https://rsshub.app/nikkei/asia"
+  },
+  {
+    "title": "The Business of Fashion",
+    "feedUrl": "https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml"
+  },
+  {
+    "title": "500px",
+    "feedUrl": "https://iso.500px.com/feed"
+  },
+  {
+    "title": "Daily Front Row",
+    "feedUrl": "https://fashionweekdaily.com/feed/"
+  },
+  {
+    "title": "BioPharma Dive - Latest News",
+    "feedUrl": "https://www.biopharmadive.com/feeds/news/"
+  },
+  {
+    "title": "The Medical News",
+    "feedUrl": "https://www.news-medical.net/syndication.axd?format=rss"
+  },
+  {
+    "title": "Medical Xpress - latest medical and health news stories",
+    "feedUrl": "https://medicalxpress.com/rss-feed/"
+  },
+  {
+    "title": "Business - South China Morning Post",
+    "feedUrl": "https://www.scmp.com/rss/92/feed"
+  },
+  {
+    "title": "WWD",
+    "feedUrl": "https://wwd.com/feed/"
+  },
+  {
+    "title": "WSJ.com: Markets",
+    "feedUrl": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"
+  },
+  {
+    "title": "WSJ.com: Economy",
+    "feedUrl": "https://feeds.content.dowjones.io/public/rss/socialeconomyfeed"
+  },
+  {
+    "title": "International homepage",
+    "feedUrl": "https://www.ft.com/rss/home/international"
+  },
+  {
+    "title": "Retail Dive - Latest News",
+    "feedUrl": "https://www.retaildive.com/feeds/news/"
+  },
+  {
+    "title": "The Zoe Report",
+    "feedUrl": "https://www.thezoereport.com/rss"
+  },
+  {
+    "title": "Psychology Today: The Latest",
+    "feedUrl": "https://www.psychologytoday.com/intl/front/feed"
+  },
+  {
+    "title": "NME",
+    "feedUrl": "https://www.nme.com/feed"
+  },
+  {
+    "title": "Rust Blog",
+    "feedUrl": "https://blog.rust-lang.org/feed.xml"
+  },
+  {
+    "title": "No Mercy / No Malice",
+    "feedUrl": "https://www.profgalloway.com/feed/"
+  },
+  {
+    "title": "Contexts",
+    "feedUrl": "https://contexts.org/feed/"
+  },
+  {
+    "title": "Farnam Street",
+    "feedUrl": "https://fs.blog/feed"
+  },
+  {
+    "title": "LogRocket Blog",
+    "feedUrl": "https://blog.logrocket.com/feed"
+  },
+  {
+    "title": "TED",
+    "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug"
+  },
+  {
+    "title": "Visual Studio Code - Code Editing. Redefined.",
+    "feedUrl": "https://code.visualstudio.com/feed.xml"
+  },
+  {
+    "title": "AnOther",
+    "feedUrl": "https://www.anothermag.com/feed"
+  },
+  {
+    "title": "GitHub All Languages Weekly Trending",
+    "feedUrl": "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml"
+  },
+  {
+    "title": "Web Tools Weekly Archive Feed",
+    "feedUrl": "https://us5.campaign-archive.com/feed?id=104d6bcc2d&u=ea228d7061e8bbfa8639666ad"
+  },
+  {
+    "title": "FlowingData",
+    "feedUrl": "https://flowingdata.com/feed"
+  },
+  {
+    "title": "Nautilus",
+    "feedUrl": "https://nautil.us/feed/"
+  },
+  {
+    "title": "FA RSS",
+    "feedUrl": "https://www.foreignaffairs.com/rss.xml"
+  },
+  {
+    "title": "IEEE Spectrum",
+    "feedUrl": "https://spectrum.ieee.org/feeds/feed.rss"
+  },
+  {
+    "title": "United States",
+    "feedUrl": "https://www.economist.com/united-states/rss.xml"
+  },
+  {
+    "title": "The New York Review of Books",
+    "feedUrl": "https://feeds.feedburner.com/nybooks"
+  },
+  {
+    "title": "OMG! Ubuntu",
+    "feedUrl": "https://www.omgubuntu.co.uk/feed"
+  },
+  {
+    "title": "The Next Web",
+    "feedUrl": "https://thenextweb.com/feed"
+  },
+  {
+    "title": "Notes on software development",
+    "feedUrl": "https://notes.eatonphil.com/rss.xml"
+  },
+  {
+    "title": "Windows Latest",
+    "feedUrl": "https://www.windowslatest.com/feed/"
+  },
+  {
+    "title": "Blog on LlamaIndex",
+    "feedUrl": "https://www.llamaindex.ai/blog/feed"
+  },
+  {
+    "title": "Spyglass",
+    "feedUrl": "https://spyglass.org/rss/"
+  },
+  {
+    "title": "CEPA",
+    "feedUrl": "https://cepa.org/feed/"
+  },
+  {
+    "title": "PMLiVE",
+    "feedUrl": "https://pmlive.com/feed/"
+  },
+  {
+    "title": "The world this week",
+    "feedUrl": "https://www.economist.com/the-world-this-week/rss.xml"
+  },
+  {
+    "title": "Science & technology",
+    "feedUrl": "https://www.economist.com/science-and-technology/rss.xml"
+  },
+  {
+    "title": "NASA Astronomy Picture of the Day",
+    "feedUrl": "https://rsshub.app/nasa/apod"
+  },
+  {
+    "title": "GitHub Rust Weekly Trending",
+    "feedUrl": "https://mshibanami.github.io/GitHubTrendingRSS/weekly/rust.xml"
+  },
+  {
+    "title": "Ness Labs",
+    "feedUrl": "https://nesslabs.com/feed"
+  },
+  {
+    "title": "Standard C++",
+    "feedUrl": "https://isocpp.org/blog/rss"
+  },
+  {
+    "title": "Astral Codex Ten",
+    "feedUrl": "https://astralcodexten.substack.com/feed"
+  },
+  {
+    "title": "Latest U.S. News | Top headlines from the USA | Reuters",
+    "feedUrl": "https://rsshub.app/reuters/world/us"
+  },
+  {
+    "title": "DC Rainmaker",
+    "feedUrl": "https://www.dcrainmaker.com/feed"
+  },
+  {
+    "title": "Elastic Blog - Elasticsearch, Kibana, and ELK Stack",
+    "feedUrl": "https://www.elastic.co/blog/feed"
+  },
+  {
+    "title": "The Smashing Email Newsletter on Smashing Magazine — For Web Designers And Developers",
+    "feedUrl": "https://www.smashingmagazine.com/the-smashing-newsletter/index.xml"
+  },
+  {
+    "title": "Blog RSS feed",
+    "feedUrl": "https://www.sonarsource.com/rss.xml"
+  },
+  {
+    "title": "Pluralistic: Daily links from Cory Doctorow",
+    "feedUrl": "https://pluralistic.net/feed/"
+  },
+  {
+    "title": "Horizon3.ai",
+    "feedUrl": "https://www.horizon3.ai/feed/"
+  },
+  {
+    "title": "ChinaTalk",
+    "feedUrl": "https://www.chinatalk.media/feed"
+  },
+  {
+    "title": "Nature Protocols",
+    "feedUrl": "https://www.nature.com/nprot.rss"
+  },
+  {
+    "title": "Nature Sustainability",
+    "feedUrl": "https://www.nature.com/natsustain.rss"
+  },
+  {
+    "title": "The Daily",
+    "feedUrl": "https://feeds.simplecast.com/54nAGcIl"
+  },
+  {
+    "title": "Nature Biotechnology",
+    "feedUrl": "https://www.nature.com/nbt.rss"
+  },
+  {
+    "title": "Nature Nanotechnology",
+    "feedUrl": "https://www.nature.com/nnano.rss"
+  },
+  {
+    "title": "SingularityHub",
+    "feedUrl": "https://singularityhub.com/feed/"
+  },
+  {
+    "title": "NextDraft: The Day's Most Fascinating News",
+    "feedUrl": "https://nextdraft.com/archives/feed/"
+  },
+  {
+    "title": "MIT News - Artificial intelligence",
+    "feedUrl": "https://news.mit.edu/rss/topic/artificial-intelligence2"
+  },
+  {
+    "title": "Stack Overflow Blog",
+    "feedUrl": "https://stackoverflow.blog/feed"
+  },
+  {
+    "title": "Frontend Masters Boost RSS Feed",
+    "feedUrl": "https://frontendmasters.com/blog/feed/"
+  },
+  {
+    "title": "PharmaVoice - Latest News",
+    "feedUrl": "https://www.pharmavoice.com/feeds/news/"
+  },
+  {
+    "title": "MetalMiner",
+    "feedUrl": "https://agmetalminer.com/feed/"
+  },
+  {
+    "title": "Netflix TechBlog - Medium",
+    "feedUrl": "https://netflixtechblog.com/feed"
+  },
+  {
+    "title": "Obsidian Changelog",
+    "feedUrl": "https://obsidian.md/changelog.xml"
+  },
+  {
+    "title": "Google DeepMind Blog",
+    "feedUrl": "https://deepmind.google/blog/rss.xml"
+  },
+  {
+    "title": "Apple Newsroom",
+    "feedUrl": "https://www.apple.com/newsroom/rss-feed.rss"
+  },
+  {
+    "title": "9GAG RSS feed",
+    "feedUrl": "https://9gagrss.com/feed"
+  },
+  {
+    "title": "ScienceDirect Publication: Science of The Total Environment",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/00489697"
+  },
+  {
+    "title": "Stephen Wolfram Writings",
+    "feedUrl": "https://writings.stephenwolfram.com/feed"
+  },
+  {
+    "title": "Latest from Tom's Hardware",
+    "feedUrl": "https://www.tomshardware.com/feeds/all"
+  },
+  {
+    "title": "Securelist",
+    "feedUrl": "https://securelist.com/feed"
+  },
+  {
+    "title": "Remote Sensing",
+    "feedUrl": "https://www.mdpi.com/rss/journal/remotesensing"
+  },
+  {
+    "title": "The Guardian/US",
+    "feedUrl": "https://feedmaker.kindle4rss.com/feeds/us.theguardian.xml"
+  },
+  {
+    "title": "The Official Google Blog",
+    "feedUrl": "https://feeds.feedburner.com/blogspot/MKuf"
+  },
+  {
+    "title": "Design MilkDesign Milk",
+    "feedUrl": "https://feeds.feedburner.com/design-milk"
+  },
+  {
+    "title": "Latest from Live Science",
+    "feedUrl": "https://www.livescience.com/feeds/all"
+  },
+  {
+    "title": "Latest News from Science Magazine",
+    "feedUrl": "https://www.science.org/rss/news_current.xml"
+  },
+  {
+    "title": "NYT > Science",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml"
+  },
+  {
+    "title": "Top stories - Google News",
+    "feedUrl": "https://news.google.com/rss?ceid=US:en&gl=US&hl=en-US"
+  },
+  {
+    "title": "International",
+    "feedUrl": "https://www.economist.com/international/rss.xml"
+  },
+  {
+    "title": "The GameDiscoverCo newsletter",
+    "feedUrl": "https://newsletter.gamediscover.co/feed"
+  },
+  {
+    "title": "番組、萌え",
+    "feedUrl": "https://bangumi.moe/rss/latest"
+  },
+  {
+    "title": "GSMArena.com - Latest articles",
+    "feedUrl": "https://www.gsmarena.com/rss-news-reviews.php3"
+  },
+  {
+    "title": "The Blog of Author Tim Ferriss",
+    "feedUrl": "https://tim.blog/feed"
+  },
+  {
+    "title": "gamedeveloper",
+    "feedUrl": "https://www.gamedeveloper.com/rss.xml"
+  },
+  {
+    "title": "Wiley: Global Change Biology: Table of Contents",
+    "feedUrl": "https://onlinelibrary.wiley.com/action/showFeed?feed=rss&jc=13652486&type=etoc"
+  },
+  {
+    "title": "Exploit-DB.com RSS Feed",
+    "feedUrl": "https://www.exploit-db.com/rss.xml"
+  },
+  {
+    "title": "hacking: security in practice",
+    "feedUrl": "https://www.reddit.com/r/hacking/.rss"
+  },
+  {
+    "title": "Wall Street Breakfast - 1 Page Daily Business News Summary",
+    "feedUrl": "https://seekingalpha.com/tag/wall-st-breakfast.xml"
+  },
+  {
+    "title": "France 24 - International breaking news, top stories and headlines",
+    "feedUrl": "https://www.france24.com/en/rss"
+  },
+  {
+    "title": "The Rust Programming Language Forum - Latest topics",
+    "feedUrl": "https://users.rust-lang.org/latest.rss"
+  },
+  {
+    "title": "Feed: Artificial Intelligence Latest",
+    "feedUrl": "https://www.wired.com/feed/tag/ai/latest/rss"
+  },
+  {
+    "title": "All CISA Advisories",
+    "feedUrl": "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+  },
+  {
+    "title": "Inoreader blog",
+    "feedUrl": "https://www.inoreader.com/blog/feed"
+  },
+  {
+    "title": "Hacker News: Best",
+    "feedUrl": "https://hnrss.org/best"
+  },
+  {
+    "title": "Bear Blog Trending Posts",
+    "feedUrl": "https://bearblog.dev/discover/feed/?type=rss"
+  },
+  {
+    "title": "www.espn.com - NBA",
+    "feedUrl": "https://www.espn.com/espn/rss/nba/news"
+  },
+  {
+    "title": "All Top News -- ScienceDaily",
+    "feedUrl": "https://www.sciencedaily.com/rss/top/science.xml"
+  },
+  {
+    "title": "Phys.org - latest science and technology news stories",
+    "feedUrl": "https://phys.org/rss-feed/"
+  },
+  {
+    "title": "MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+    "feedUrl": "https://news.mit.edu/topic/mitcomputers-rss.xml"
+  },
+  {
+    "title": "Culture: TV, Movies, Music, Art, and Theatre News and Reviews",
+    "feedUrl": "https://www.newyorker.com/feed/culture"
+  },
+  {
+    "title": "The Register",
+    "feedUrl": "https://www.theregister.com/headlines.atom"
+  },
+  {
+    "title": "Atlas Obscura - Latest Articles and Places",
+    "feedUrl": "https://www.atlasobscura.com/feeds/latest"
+  },
+  {
+    "title": "CNET",
+    "feedUrl": "https://www.cnet.com/rss/news/"
+  },
+  {
+    "title": "DHL Logistics of Things",
+    "feedUrl": "https://lot.dhl.com/feed/"
+  },
+  {
+    "title": "TigerData Blog",
+    "feedUrl": "https://www.timescale.com/blog/rss/"
+  },
+  {
+    "title": "insidejava",
+    "feedUrl": "https://inside.java/feed.xml"
+  },
+  {
+    "title": "LowEndTalk",
+    "feedUrl": "https://lowendtalk.com/discussions/feed.rss"
+  },
+  {
+    "title": "Qualys Security Blog",
+    "feedUrl": "https://blog.qualys.com/feed"
+  },
+  {
+    "title": "darkreading",
+    "feedUrl": "https://www.darkreading.com/rss.xml"
+  },
+  {
+    "title": "Planet Python",
+    "feedUrl": "https://planetpython.org/rss20.xml"
+  },
+  {
+    "title": "Splash247",
+    "feedUrl": "https://splash247.com/feed/"
+  },
+  {
+    "title": "Wiley: The Plant Journal: Table of Contents",
+    "feedUrl": "https://onlinelibrary.wiley.com/action/showFeed?feed=rss&jc=1365313x&type=etoc"
+  },
+  {
+    "title": "Uncharted Territories",
+    "feedUrl": "https://unchartedterritories.tomaspueyo.com/feed"
+  },
+  {
+    "title": "daverupert.com",
+    "feedUrl": "https://daverupert.com/atom.xml"
+  },
+  {
+    "title": "Nature Reviews Materials",
+    "feedUrl": "https://www.nature.com/natrevmats.rss"
+  },
+  {
+    "title": "U.S.-China Perception Monitor",
+    "feedUrl": "https://uscnpm.org/feed/"
+  },
+  {
+    "title": "Steph Ango",
+    "feedUrl": "https://stephango.com/feed.xml"
+  },
+  {
+    "title": "More To That",
+    "feedUrl": "https://moretothat.com/feed/"
+  },
+  {
+    "title": "AAAS: Table of Contents",
+    "feedUrl": "https://www.science.org/action/showFeed?feed=rss&jc=science&type=axatoc"
+  },
+  {
+    "title": "Main stream | FreshRSS",
+    "feedUrl": "https://feed.hsfzxjy.site/i/?a=rss&hours=168&token=me&user=hsfzxjy"
+  },
+  {
+    "title": "bellingcat",
+    "feedUrl": "https://www.bellingcat.com/feed/"
+  },
+  {
+    "title": "CrunchyData Blog",
+    "feedUrl": "https://www.crunchydata.com/blog/rss.xml"
+  },
+  {
+    "title": "UK homepage",
+    "feedUrl": "https://www.ft.com/rss/home/uk"
+  },
+  {
+    "title": "NYT > China",
+    "feedUrl": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/destination/china/rss.xml"
+  },
+  {
+    "title": "Scientific Reports",
+    "feedUrl": "https://www.nature.com/srep.rss"
+  },
+  {
+    "title": "Proceedings of the National Academy of Sciences: Proceedings of the National Academy of Sciences: Table of Contents",
+    "feedUrl": "https://www.pnas.org/action/showFeed?feed=rss&jc=PNAS&type=etoc"
+  },
+  {
+    "title": "It's Nice That",
+    "feedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC"
+  },
+  {
+    "title": "NPR Topics: World",
+    "feedUrl": "https://feeds.npr.org/1004/rss.xml"
+  },
+  {
+    "title": "World - CBSNews.com",
+    "feedUrl": "https://www.cbsnews.com/latest/rss/world"
+  },
+  {
+    "title": "1x.com • In Pursuit of the Sublime",
+    "feedUrl": "https://rsshub.app/1x/latest/awarded"
+  },
+  {
+    "title": "Tech&Sci",
+    "feedUrl": "https://www.cgtn.com/subscribe/rss/section/tech-sci.xml"
+  },
+  {
+    "title": "Lloyd's List: Containers",
+    "feedUrl": "https://feeds.feedblitz.com/ll-containers&x=1"
+  },
+  {
+    "title": "Home - CBSNews.com",
+    "feedUrl": "https://www.cbsnews.com/latest/rss/main"
+  },
+  {
+    "title": "cs updates on arXiv.org",
+    "feedUrl": "https://rss.arxiv.org/rss/cs"
+  },
+  {
+    "title": "stat.ML updates on arXiv.org",
+    "feedUrl": "https://rss.arxiv.org/rss/stat.ML"
+  },
+  {
+    "title": "UX Magazine",
+    "feedUrl": "https://uxmag.com/feed"
+  },
+  {
+    "title": "freeCodeCamp Programming Tutorials: Python, JavaScript, Git & More",
+    "feedUrl": "https://www.freecodecamp.org/news/rss/"
+  },
+  {
+    "title": "Qdrant - Vector Database",
+    "feedUrl": "https://qdrant.tech/index.xml"
+  },
+  {
+    "title": "GamingOnLinux Latest Articles",
+    "feedUrl": "https://www.gamingonlinux.com/article_rss.php"
+  },
+  {
+    "title": "Engineering Leadership",
+    "feedUrl": "https://newsletter.eng-leadership.com/feed"
+  },
+  {
+    "title": "News - AlternativeTo.net",
+    "feedUrl": "https://feed.alternativeto.net/news/all"
+  },
+  {
+    "title": "6 Minute English",
+    "feedUrl": "https://podcasts.files.bbci.co.uk/p02pc9tn.rss"
+  },
+  {
+    "title": "Pitchfork",
+    "feedUrl": "https://pitchfork.com/feed/rss"
+  },
+  {
+    "title": "ACM TechNews",
+    "feedUrl": "https://rss.acm.org/technews/TechNews.xml"
+  },
+  {
+    "title": "Mashable",
+    "feedUrl": "https://mashable.com/feeds/rss/all"
+  },
+  {
+    "title": "Tradewinds",
+    "feedUrl": "https://services.tradewindsnews.com/api/feed/rss"
+  },
+  {
+    "title": "All Articles on Seeking Alpha",
+    "feedUrl": "https://seekingalpha.com/feed.xml"
+  },
+  {
+    "title": "JAMA Online First",
+    "feedUrl": "https://jamanetwork.com/rss/site_3/onlineFirst_67.xml"
+  },
+  {
+    "title": "Decrypt",
+    "feedUrl": "https://decrypt.co/feed"
+  },
+  {
+    "title": "ScienceBlog.com",
+    "feedUrl": "https://scienceblog.com/feed"
+  },
+  {
+    "title": "Latest from Forbes",
+    "feedUrl": "https://www.forbes.com/real-time/feed2"
+  },
+  {
+    "title": "The Diplomat",
+    "feedUrl": "https://thediplomat.com/feed"
+  },
+  {
+    "title": "Check Point Research",
+    "feedUrl": "https://research.checkpoint.com/feed"
+  },
+  {
+    "title": "Bloomberg Wealth",
+    "feedUrl": "https://feeds.bloomberg.com/wealth/news.rss"
+  },
+  {
+    "title": "massmed: New England Journal of Medicine: Table of Contents",
+    "feedUrl": "https://www.nejm.org/action/showFeed?feed=rss&jc=nejm&type=etoc"
+  },
+  {
+    "title": "China Daily",
+    "feedUrl": "https://feedx.net/rss/chinadaily.xml"
+  },
+  {
+    "title": "Fashion - ELLE",
+    "feedUrl": "https://www.elle.com/rss/fashion.xml/"
+  },
+  {
+    "title": "fashionunited.com",
+    "feedUrl": "https://fashionunited.com/rss/news?local_newsboard=us"
+  },
+  {
+    "title": "News, opinion, and analysis for the Pharmaceutical and Drug Manufacturing Industry",
+    "feedUrl": "https://pharmaceuticalmanufacturer.media/api/rss/content.rss"
+  },
+  {
+    "title": "Asia news | The Guardian",
+    "feedUrl": "https://www.theguardian.com/world/asia/rss"
+  },
+  {
+    "title": "HR Dive - Latest News",
+    "feedUrl": "https://www.hrdive.com/feeds/news/"
+  },
+  {
+    "title": "MedTech Dive - Latest News",
+    "feedUrl": "https://www.medtechdive.com/feeds/news/"
+  },
+  {
+    "title": "BestBlogs.dev",
+    "feedUrl": "https://www.bestblogs.dev/en/feeds/rss"
+  },
+  {
+    "title": "Machine Learning",
+    "feedUrl": "https://www.reddit.com/r/MachineLearning/.rss"
+  },
+  {
+    "title": "82MHz - All blog posts",
+    "feedUrl": "https://82mhz.net/index.xml"
+  },
+  {
+    "title": "Wiley: Advanced Science: Table of Contents",
+    "feedUrl": "https://advanced.onlinelibrary.wiley.com/feed/21983844/most-recent"
+  },
+  {
+    "title": "Golang Weekly",
+    "feedUrl": "https://cprss.s3.amazonaws.com/golangweekly.com.xml"
+  },
+  {
+    "title": "This Week in Rust",
+    "feedUrl": "https://this-week-in-rust.org/rss.xml"
+  },
+  {
+    "title": "CSS Weekly",
+    "feedUrl": "https://feeds.feedburner.com/CSS-Weekly"
+  },
+  {
+    "title": "Google Online Security Blog",
+    "feedUrl": "https://feeds.feedburner.com/GoogleOnlineSecurityBlog"
+  },
+  {
+    "title": "Security Blog | Praetorian",
+    "feedUrl": "https://www.praetorian.com/blog/feed/"
+  },
+  {
+    "title": "A Collection of Unmitigated Pedantry",
+    "feedUrl": "https://acoup.blog/feed/"
+  },
+  {
+    "title": "Corrode Rust Consulting",
+    "feedUrl": "https://corrode.dev/rss.xml"
+  },
+  {
+    "title": "Basic Apple Guy | Apple Wallpapers, Reviews, and Merch",
+    "feedUrl": "https://basicappleguy.com/basicappleblog?format=rss"
+  },
+  {
+    "title": "The ASF Blog",
+    "feedUrl": "https://news.apache.org/feed"
+  },
+  {
+    "title": "NVISO Labs",
+    "feedUrl": "https://blog.nviso.eu/feed"
+  },
+  {
+    "title": "Merriam-Webster's Word of the Day",
+    "feedUrl": "https://www.merriam-webster.com/wotd/feed/rss2"
+  },
+  {
+    "title": "Business",
+    "feedUrl": "https://www.economist.com/business/rss.xml"
+  },
+  {
+    "title": "Amazon News",
+    "feedUrl": "https://www.aboutamazon.com/about-amazon-rss.rss"
+  },
+  {
+    "title": "Science Latest",
+    "feedUrl": "https://www.wired.com/feed/category/science/latest/rss"
+  },
+  {
+    "title": "Baeldung",
+    "feedUrl": "https://feeds.feedblitz.com/baeldung&x=1"
+  },
+  {
+    "title": "OMG! Ubuntu!",
+    "feedUrl": "https://feeds.feedburner.com/d0od"
+  },
+  {
+    "title": "Cell",
+    "feedUrl": "https://www.cell.com/cell/inpress.rss"
+  },
+  {
+    "title": "Our World in Data",
+    "feedUrl": "https://ourworldindata.org/atom.xml"
+  },
+  {
+    "title": "NVIDIA Blog",
+    "feedUrl": "https://feeds.feedburner.com/nvidiablog"
+  },
+  {
+    "title": "ScienceDirect Publication: Remote Sensing of Environment",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/00344257"
+  },
+  {
+    "title": "ScienceDirect Publication: ISPRS Journal of Photogrammetry and Remote Sensing",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/09242716"
+  },
+  {
+    "title": "APOD",
+    "feedUrl": "https://apod.nasa.gov/apod.rss"
+  },
+  {
+    "title": "Weekly Vue News",
+    "feedUrl": "https://weekly-vue.news/rss.xml"
+  },
+  {
+    "title": "National Bureau of Economic Research Working Papers",
+    "feedUrl": "https://back.nber.org/rss/new.xml"
+  },
+  {
+    "title": "Daniel Lemire's blog",
+    "feedUrl": "https://lemire.me/blog/feed/"
+  },
+  {
+    "title": "ScienceDirect Publication: Science Bulletin",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/20959273"
+  },
+  {
+    "title": "Apple Machine Learning Research",
+    "feedUrl": "https://machinelearning.apple.com/rss.xml"
+  },
+  {
+    "title": "McSweeney’s",
+    "feedUrl": "https://feeds.feedburner.com/mcsweeneys"
+  },
+  {
+    "title": "Databricks",
+    "feedUrl": "https://www.databricks.com/feed"
+  },
+  {
+    "title": "ScienceDirect Publication: Cell",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/00928674"
+  },
+  {
+    "title": "Biz & IT – Ars Technica",
+    "feedUrl": "https://feeds.arstechnica.com/arstechnica/technology-lab"
+  },
+  {
+    "title": "watchTowr Labs",
+    "feedUrl": "https://labs.watchtowr.com/rss/"
+  },
+  {
+    "title": "It's FOSS News",
+    "feedUrl": "https://news.itsfoss.com/latest/rss/"
+  },
+  {
+    "title": "Nature Physics",
+    "feedUrl": "https://www.nature.com/nphys.rss"
+  },
+  {
+    "title": "Nature Ecology & Evolution",
+    "feedUrl": "https://www.nature.com/natecolevol.rss"
+  },
+  {
+    "title": "Source",
+    "feedUrl": "https://news.microsoft.com/source/feed/"
+  },
+  {
+    "title": "Weekly Wisereads",
+    "feedUrl": "https://wise.readwise.io/feed/"
+  },
+  {
+    "title": "Geoffrey Litt",
+    "feedUrl": "https://www.geoffreylitt.com/feed.xml"
+  },
+  {
+    "title": "Nature Genetics",
+    "feedUrl": "https://www.nature.com/ng.rss"
+  },
+  {
+    "title": "Nature Reviews Clinical Oncology",
+    "feedUrl": "https://www.nature.com/nrclinonc.rss"
+  },
+  {
+    "title": "JAMA Current Issue",
+    "feedUrl": "https://jamanetwork.com/rss/site_3/67.xml"
+  },
+  {
+    "title": "9to5Linux",
+    "feedUrl": "https://9to5linux.com/feed/atom"
+  },
+  {
+    "title": "Vercel News",
+    "feedUrl": "https://vercel.com/atom"
+  },
+  {
+    "title": "The National Interest",
+    "feedUrl": "https://nationalinterest.org/feed"
+  },
+  {
+    "title": "Marketing",
+    "feedUrl": "https://blog.hubspot.com/marketing/rss.xml"
+  },
+  {
+    "title": "Google Chrome Releases",
+    "feedUrl": "https://feeds.feedburner.com/GoogleChromeReleases"
+  },
+  {
+    "title": "Pew Research Center",
+    "feedUrl": "https://www.pewresearch.org/feed/"
+  },
+  {
+    "title": "WoltersKluwer: Journal of Clinical Oncology: Table of Contents",
+    "feedUrl": "https://ascopubs.org/action/showFeed?feed=rss&jc=jco&type=etoc"
+  },
+  {
+    "title": "Beauty - Harper's BAZAAR",
+    "feedUrl": "https://www.harpersbazaar.com/rss/beauty.xml"
+  },
+  {
+    "title": "Hotel Dive - Latest News",
+    "feedUrl": "https://www.hoteldive.com/feeds/news/"
+  },
+  {
+    "title": "Jina AI",
+    "feedUrl": "https://jina.ai/feed.rss"
+  },
+  {
+    "title": "The Go Blog",
+    "feedUrl": "https://go.dev/blog/feed.atom"
+  },
+  {
+    "title": "NASA Image of the Day",
+    "feedUrl": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss"
+  },
+  {
+    "title": "Ocean Transportation",
+    "feedUrl": "https://www.supplychainbrain.com/rss/topic/1143-ocean-transportation"
+  },
+  {
+    "title": "Supply Chain Planning & Optimization",
+    "feedUrl": "https://www.supplychainbrain.com/rss/topic/1159-supply-chain-planning-optimization"
+  },
+  {
+    "title": "Zettelkasten.de",
+    "feedUrl": "https://zettelkasten.de/feed.atom"
+  },
+  {
+    "title": "ScienceDirect Publication: China Economic Review",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/1043951X"
+  },
+  {
+    "title": "GitHub Rust Daily Trending",
+    "feedUrl": "https://mshibanami.github.io/GitHubTrendingRSS/daily/rust.xml"
+  },
+  {
+    "title": "Windows Insider Blog",
+    "feedUrl": "https://blogs.windows.com/windows-insider/feed/"
+  },
+  {
+    "title": "Armin Ronacher's Thoughts and Writings",
+    "feedUrl": "https://lucumr.pocoo.org/feed.atom"
+  },
+  {
+    "title": "ScienceDirect Publication: Developmental Cell",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/15345807"
+  },
+  {
+    "title": "Codrops",
+    "feedUrl": "https://tympanus.net/codrops/feed/"
+  },
+  {
+    "title": "Nature Plants",
+    "feedUrl": "https://www.nature.com/nplants.rss?code=b58abf4c-ae12-48dd-9c6f-b7d23dd7a50d&error=cookies_not_supported"
+  },
+  {
+    "title": "Nature Machine Intelligence",
+    "feedUrl": "https://www.nature.com/natmachintell.rss"
+  },
+  {
+    "title": "ntietz.com blog - technically a blog",
+    "feedUrl": "https://ntietz.com/atom.xml"
+  },
+  {
+    "title": "AAAS: Science Translational Medicine: Table of Contents",
+    "feedUrl": "https://www.science.org/action/showFeed?feed=rss&jc=stm&type=etoc"
+  },
+  {
+    "title": "Nature Metabolism",
+    "feedUrl": "https://www.nature.com/natmetab.rss"
+  },
+  {
+    "title": "Nature Reviews Drug Discovery",
+    "feedUrl": "https://www.nature.com/nrd.rss"
+  },
+  {
+    "title": "Nature Geoscience",
+    "feedUrl": "https://www.nature.com/ngeo.rss"
+  },
+  {
+    "title": "Blog",
+    "feedUrl": "https://rsshub.app/web/blog"
+  },
+  {
+    "title": "AWS Security Blog",
+    "feedUrl": "https://aws.amazon.com/blogs/security/feed/"
+  },
+  {
+    "title": "Cool Tools",
+    "feedUrl": "https://kk.org/cooltools/feed/"
+  },
+  {
+    "title": "Linus Tech Tips",
+    "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw"
+  },
+  {
+    "title": "Engineering on Grafana Labs",
+    "feedUrl": "https://grafana.com/categories/engineering/index.xml"
+  },
+  {
+    "title": "Google Developers Blog",
+    "feedUrl": "https://developers.googleblog.com/feeds/posts/default/"
+  },
+  {
+    "title": "Articles",
+    "feedUrl": "https://rsshub.app/web/articles"
+  },
+  {
+    "title": "Nature Synthesis",
+    "feedUrl": "https://www.nature.com/natsynth.rss"
+  },
+  {
+    "title": "folfirinox",
+    "feedUrl": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1HOeXEUmUzbKSf_WSyCyoQxwU5r9nyG7k_bSBQQCeO6qzuW94P/?fc=20240105230810&limit=15"
+  },
+  {
+    "title": "pancreatic cancer",
+    "feedUrl": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1zIX7wcGOEmwGp3DN74rGAFOLRdtCZpAoKp5o488eXULl6tsB1/?fc=20240413111510&limit=100"
+  },
+  {
+    "title": "未公开的中国 - YouTube",
+    "feedUrl": "https://rsshub.app/youtube/user/@realchina"
+  },
+  {
+    "title": "Clinical Cancer Research Current Issue",
+    "feedUrl": "https://aacrjournals.org/rss/site_1000013/1000009.xml"
+  },
+  {
+    "title": "Collaborative Fund",
+    "feedUrl": "https://feeds.feedburner.com/collabfund"
+  },
+  {
+    "title": "jdhao's digital space",
+    "feedUrl": "https://jdhao.github.io/index.xml"
+  },
+  {
+    "title": "The Fly Blog",
+    "feedUrl": "https://fly.io/blog/feed.xml"
+  },
+  {
+    "title": "matklad",
+    "feedUrl": "https://matklad.github.io/feed.xml"
+  },
+  {
+    "title": "Stay SaaSy",
+    "feedUrl": "https://staysaasy.com/feed.xml"
+  },
+  {
+    "title": "奇安信 X 实验室",
+    "feedUrl": "https://blog.xlab.qianxin.com/rss/"
+  },
+  {
+    "title": "iA",
+    "feedUrl": "https://ia.net/feed"
+  },
+  {
+    "title": "Briefing",
+    "feedUrl": "https://www.economist.com/briefing/rss.xml"
+  },
+  {
+    "title": "Business Latest",
+    "feedUrl": "https://www.wired.com/feed/category/business/latest/rss"
+  },
+  {
+    "title": "ScienceDirect Publication: Ecological Indicators",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/1470160X"
+  },
+  {
+    "title": "ScienceDirect Publication: Journal of Cleaner Production",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/09596526"
+  },
+  {
+    "title": "The University of Chicago Press: Journal of Political Economy: Table of Contents",
+    "feedUrl": "https://www.journals.uchicago.edu/action/showFeed?feed=rss&jc=jpe&type=etoc"
+  },
+  {
+    "title": "overreacted — A blog by Dan Abramov",
+    "feedUrl": "https://overreacted.io/rss.xml"
+  },
+  {
+    "title": "ArchDaily Global",
+    "feedUrl": "https://feeds.feedburner.com/Archdaily"
+  },
+  {
+    "title": "Journal of Commerce | Rail News",
+    "feedUrl": "https://www.joc.com/rssfeed/8878"
+  },
+  {
+    "title": "Microsoft Azure Blog",
+    "feedUrl": "https://azure.microsoft.com/en-us/blog/feed"
+  },
+  {
+    "title": "不忘初心 方得始终",
+    "feedUrl": "https://terenceli.github.io/atom.xml"
+  },
+  {
+    "title": "Visual Studio Blog",
+    "feedUrl": "https://devblogs.microsoft.com/visualstudio/feed"
+  },
+  {
+    "title": "JNM Current Issue",
+    "feedUrl": "https://jnm.snmjournals.org/rss/current.xml"
+  },
+  {
+    "title": "OpenAI News",
+    "feedUrl": "https://openai.com/blog/rss.xml"
+  },
+  {
+    "title": "ACS Applied Materials & Interfaces: Latest Articles (ACS Publications)",
+    "feedUrl": "https://pubs.acs.org/action/showFeed?feed=rss&jc=aamick&type=axatoc"
+  },
+  {
+    "title": "\\\"when:24h allinurl:reuters.com\\\" - Google News",
+    "feedUrl": "https://news.google.com/rss/search?ceid=US:en&gl=US&hl=en-US&q=when:24h+allinurl:reuters.com"
+  },
+  {
+    "title": "Kobzol’s blog",
+    "feedUrl": "https://kobzol.github.io/feed.xml"
+  },
+  {
+    "title": "Defense.gov Explore Feed",
+    "feedUrl": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10"
+  },
+  {
+    "title": "Raptitude.com",
+    "feedUrl": "https://www.raptitude.com/feed/"
+  },
+  {
+    "title": "Zhiqiang's backyard",
+    "feedUrl": "https://strrl.dev/index.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Mechanical Systems and Signal Processing",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/08883270"
+  },
+  {
+    "title": "ScienceDirect Publication: Engineering Structures",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/01410296"
+  },
+  {
+    "title": "samwho.dev",
+    "feedUrl": "https://samwho.dev/rss.xml"
+  },
+  {
+    "title": "Developer Way: improve your technical skills with in-depth explanations, practical advices and useful tips and tricks.",
+    "feedUrl": "https://www.developerway.com/rss.xml"
+  },
+  {
+    "title": "n+1Articles – n+1",
+    "feedUrl": "https://www.nplusonemag.com/feed/"
+  },
+  {
+    "title": "ScienceDirect Publication: Materials Science and Engineering: A",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/09215093"
+  },
+  {
+    "title": "The Trail of Bits Blog",
+    "feedUrl": "https://blog.trailofbits.com/feed/"
+  },
+  {
+    "title": "ScienceDirect Publication: Computers and Electronics in Agriculture",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/01681699"
+  },
+  {
+    "title": "NYT > U.S. News",
+    "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml"
+  },
+  {
+    "title": "Evil Martians",
+    "feedUrl": "https://evilmartians.com/chronicles.atom"
+  },
+  {
+    "title": "Dropbox Tech Blog",
+    "feedUrl": "https://dropbox.tech/feed"
+  },
+  {
+    "title": "ScienceDirect Publication: Plant Physiology and Biochemistry",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/09819428"
+  },
+  {
+    "title": ".NET Blog",
+    "feedUrl": "https://devblogs.microsoft.com/dotnet/feed/"
+  },
+  {
+    "title": "Retail",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=10000116&partnerId=wrss01"
+  },
+  {
+    "title": "Finance",
+    "feedUrl": "https://search.cnbc.com/rs/search/combinedcms/view.xml?id=10000664&partnerId=wrss01"
+  },
+  {
+    "title": "The Straits Times Asia News",
+    "feedUrl": "https://www.straitstimes.com/news/asia/rss.xml"
+  },
+  {
+    "title": "Latest News",
+    "feedUrl": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10416"
+  },
+  {
+    "title": "All News",
+    "feedUrl": "https://www.investing.com/rss/news.rss"
+  },
+  {
+    "title": "Sutter’s Mill",
+    "feedUrl": "https://herbsutter.com/feed/"
+  },
+  {
+    "title": "New Scientist - Home",
+    "feedUrl": "https://feeds.newscientist.com/home"
+  },
+  {
+    "title": "Global Issues News Headlines",
+    "feedUrl": "https://www.globalissues.org/news/feed"
+  },
+  {
+    "title": "Fox-IT International blog",
+    "feedUrl": "https://blog.fox-it.com/feed/"
+  },
+  {
+    "title": "The Moscow Times - Independent News From Russia",
+    "feedUrl": "https://www.themoscowtimes.com/rss/news"
+  },
+  {
+    "title": "Nature Catalysis",
+    "feedUrl": "https://www.nature.com/natcatal.rss"
+  },
+  {
+    "title": "Server World - Build Network Server",
+    "feedUrl": "https://www.server-world.info/en/rss2.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Energy",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/03605442"
+  },
+  {
+    "title": "Android Developers Blog",
+    "feedUrl": "https://feeds.feedburner.com/blogspot/hsDu"
+  },
+  {
+    "title": "PCMag.com - Technology Product Reviews, News, Prices & Tips",
+    "feedUrl": "https://www.pcmag.com/feeds/rss/latest"
+  },
+  {
+    "title": "Microsoft Research",
+    "feedUrl": "https://www.microsoft.com/en-us/research/feed/"
+  },
+  {
+    "title": "LWN.net",
+    "feedUrl": "https://lwn.net/headlines/newrss"
+  },
+  {
+    "title": "Opinion | The Guardian",
+    "feedUrl": "https://www.theguardian.com/us/commentisfree/rss"
+  },
+  {
+    "title": "Artificial intelligence (AI) | The Guardian",
+    "feedUrl": "https://www.theguardian.com/technology/artificialintelligenceai/rss"
+  },
+  {
+    "title": "Nature Cell Biology",
+    "feedUrl": "https://www.nature.com/ncb.rss"
+  },
+  {
+    "title": "Nature Reviews Immunology",
+    "feedUrl": "https://www.nature.com/nri.rss"
+  },
+  {
+    "title": "Nature Reviews Molecular Cell Biology",
+    "feedUrl": "https://www.nature.com/nrm.rss"
+  },
+  {
+    "title": "DER SPIEGEL - International",
+    "feedUrl": "https://www.spiegel.de/international/index.rss"
+  },
+  {
+    "title": "New Scientist - News",
+    "feedUrl": "https://feeds.newscientist.com/science-news/"
+  },
+  {
+    "title": "MarketWatch.com - Top Stories",
+    "feedUrl": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
+  },
+  {
+    "title": "World News - Breaking international news and headlines | Sky News",
+    "feedUrl": "https://feeds.skynews.com/feeds/rss/world.xml"
+  },
+  {
+    "title": "Slate Magazine",
+    "feedUrl": "https://slate.com/feeds/all.rss"
+  },
+  {
+    "title": "Moneywatch - CBSNews.com",
+    "feedUrl": "https://www.cbsnews.com/latest/rss/moneywatch"
+  },
+  {
+    "title": "Discord Blog",
+    "feedUrl": "https://discord.com/blog/rss.xml"
+  },
+  {
+    "title": "Replicate's blog",
+    "feedUrl": "https://replicate.com/blog/rss"
+  },
+  {
+    "title": "SecurityWeek",
+    "feedUrl": "https://feeds.feedburner.com/Securityweek"
+  },
+  {
+    "title": "The Register - Security",
+    "feedUrl": "https://www.theregister.com/security/headlines.atom"
+  },
+  {
+    "title": "Andy Bell",
+    "feedUrl": "https://andy-bell.co.uk/feed.xml"
+  },
+  {
+    "title": "Marques Brownlee",
+    "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ"
+  },
+  {
+    "title": "ScienceDirect Publication: Smart Agricultural Technology",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/27723755"
+  },
+  {
+    "title": "Linux Journal - The Original Magazine of the Linux Community",
+    "feedUrl": "https://www.linuxjournal.com/node/feed"
+  },
+  {
+    "title": "ScienceDirect Publication: Chemical Engineering Journal",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/13858947"
+  },
+  {
+    "title": "Markets",
+    "feedUrl": "https://www.ft.com/markets?format=rss"
+  },
+  {
+    "title": "Nintendo Life | Latest Updates",
+    "feedUrl": "https://www.nintendolife.com/feeds/latest"
+  },
+  {
+    "title": "UN News - Global perspective Human stories",
+    "feedUrl": "https://news.un.org/feed/subscribe/en/news/all/rss.xml"
+  },
+  {
+    "title": "Mining Weekly | Latest News",
+    "feedUrl": "https://www.miningweekly.com/page/latest-news/feed"
+  },
+  {
+    "title": "Battery Tech - News and Trends | InsideEVs",
+    "feedUrl": "https://insideevs.com/rss/category/battery-tech/"
+  },
+  {
+    "title": "What's New: Drugs RSS Feed",
+    "feedUrl": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drugs/rss.xml"
+  },
+  {
+    "title": "Journal of Commerce",
+    "feedUrl": "https://www.joc.com/api/rssfeed"
+  },
+  {
+    "title": "Stripe Blog",
+    "feedUrl": "https://stripe.com/blog/feed.rss"
+  },
+  {
+    "title": "LukeW | Digital Product Design + Strategy",
+    "feedUrl": "https://feeds.feedburner.com/FunctioningForm"
+  },
+  {
+    "title": "Shtetl-Optimized",
+    "feedUrl": "https://scottaaronson.blog/?feed=rss2"
+  },
+  {
+    "title": "30 seconds of code",
+    "feedUrl": "https://www.30secondsofcode.org/feed"
+  },
+  {
+    "title": "News, Politics, Opinion, Commentary, and Analysis",
+    "feedUrl": "https://www.newyorker.com/feed/news"
+  },
+  {
+    "title": "SitePoint",
+    "feedUrl": "https://www.sitepoint.com/sitepoint.rss"
+  },
+  {
+    "title": "Logistics",
+    "feedUrl": "https://www.supplychainbrain.com/rss/topic/1135-logistics"
+  },
+  {
+    "title": "Digital Photography School",
+    "feedUrl": "https://feeds.feedburner.com/DigitalPhotographySchool"
+  },
+  {
+    "title": "The New Yorker September 15, 2025",
+    "feedUrl": "https://www.newyorker.com/feed/magazine/rss"
+  },
+  {
+    "title": "ScienceDirect Publication: International Journal of Applied Earth Observation and Geoinformation",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/15698432"
+  },
+  {
+    "title": "fasterthanli.me",
+    "feedUrl": "https://fasterthanli.me/index.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Journal of Rural Studies",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/07430167"
+  },
+  {
+    "title": "FRB: Press Release - All Releases",
+    "feedUrl": "https://www.federalreserve.gov/feeds/press_all.xml"
+  },
+  {
+    "title": "Academy of Management: Academy of Management Journal: Table of Contents",
+    "feedUrl": "https://journals.aom.org/action/showFeed?feed=rss&jc=amj&type=etoc"
+  },
+  {
+    "title": "A Java geek",
+    "feedUrl": "https://blog.frankel.ch/feed.xml"
+  },
+  {
+    "title": "2ality – JavaScript and more",
+    "feedUrl": "https://2ality.com/feeds/posts.atom"
+  },
+  {
+    "title": "ScienceDirect Publication: Additive Manufacturing",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/22148604"
+  },
+  {
+    "title": "Current Biology",
+    "feedUrl": "https://www.cell.com/current-biology/inpress.rss"
+  },
+  {
+    "title": "ScienceDirect Publication: Resources, Conservation and Recycling",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/09213449"
+  },
+  {
+    "title": "Windows Developer Blog",
+    "feedUrl": "https://blogs.windows.com/windowsdeveloper/feed/"
+  },
+  {
+    "title": "Ask Hacker News Weekly",
+    "feedUrl": "https://www.daemonology.net/hn-weekly-ask/index.rss"
+  },
+  {
+    "title": "PortSwigger Blog",
+    "feedUrl": "https://portswigger.net/blog/rss"
+  },
+  {
+    "title": "Security Latest",
+    "feedUrl": "https://www.wired.com/feed/category/security/latest/rss"
+  },
+  {
+    "title": "ScienceDirect Publication: European Journal of Agronomy",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/11610301"
+  },
+  {
+    "title": "ScienceDirect Publication: Agricultural and Forest Meteorology",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/01681923"
+  },
+  {
+    "title": "Full Disclosure",
+    "feedUrl": "https://seclists.org/rss/fulldisclosure.rss"
+  },
+  {
+    "title": "CXSECURITY Database RSS Feed - CXSecurity.com",
+    "feedUrl": "https://cxsecurity.com/wlb/rss/all/"
+  },
+  {
+    "title": "Large Model Systems Organization",
+    "feedUrl": "https://lmsys.org/rss.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Materials Today",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/13697021"
+  },
+  {
+    "title": "NALIRIFOX",
+    "feedUrl": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1jo74WIY5-kjp7YUkowtTJD016ua2tuL5uMqPn1Cbgu1Kq-sLW/?fc=20240109100812&limit=15"
+  },
+  {
+    "title": "ScienceDirect Publication: Matter",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/25902385"
+  },
+  {
+    "title": "Eli Bendersky's website",
+    "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml"
+  },
+  {
+    "title": "Leaders",
+    "feedUrl": "https://www.economist.com/leaders/rss.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Journal of Financial Economics",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/0304405X"
+  },
+  {
+    "title": "American Economic Review",
+    "feedUrl": "https://pubs.aeaweb.org/rss/etoc/aer"
+  },
+  {
+    "title": "Journal of Commerce | Trucking News",
+    "feedUrl": "https://www.joc.com/rssfeed/8877"
+  },
+  {
+    "title": "Asia",
+    "feedUrl": "https://www.economist.com/asia/rss.xml"
+  },
+  {
+    "title": "DistroWatch.com: News",
+    "feedUrl": "https://distrowatch.com/news/dw.xml"
+  },
+  {
+    "title": "JNM Ahead of Print",
+    "feedUrl": "https://jnm.snmjournals.org/rss/ahead.xml"
+  },
+  {
+    "title": "Liberty Street Economics",
+    "feedUrl": "https://feeds.feedburner.com/LibertyStreetEconomics"
+  },
+  {
+    "title": "ScienceDirect Publication: Journal of Public Economics",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/00472727"
+  },
+  {
+    "title": "GitHub Rust Monthly Trending",
+    "feedUrl": "https://mshibanami.github.io/GitHubTrendingRSS/monthly/rust.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Computers & Structures",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/00457949"
+  },
+  {
+    "title": "ScienceDirect Publication: Trends in Plant Science",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/13601385"
+  },
+  {
+    "title": "ScienceDirect Publication: Molecular Plant",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/16742052"
+  },
+  {
+    "title": "Tech News | Today's Latest Technology News | Reuters",
+    "feedUrl": "https://rsshub.app/reuters/technology"
+  },
+  {
+    "title": "ScienceDirect Publication: Joule",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/25424351"
+  },
+  {
+    "title": "China Power – The Diplomat",
+    "feedUrl": "https://thediplomat.com/category/china-power/feed/"
+  },
+  {
+    "title": "ScienceDirect Publication: Journal of Plant Physiology",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/01761617"
+  },
+  {
+    "title": "Cancer Cell",
+    "feedUrl": "https://www.cell.com/cancer-cell/inpress.rss"
+  },
+  {
+    "title": "The New England Journal of Medicine: Search Results in Hematology/Oncology",
+    "feedUrl": "https://onesearch-rss.nejm.org/api/specialty/rss?context=nejm&specialty=hematology-oncology"
+  },
+  {
+    "title": "Business News | Today's International Headlines | Reuters",
+    "feedUrl": "https://rsshub.app/reuters/business"
+  },
+  {
+    "title": "Spencer Woo",
+    "feedUrl": "https://spencerwoo.com/feed.xml"
+  },
+  {
+    "title": "TLDR RSS Feed",
+    "feedUrl": "https://tldr.tech/api/rss/tech"
+  },
+  {
+    "title": "政策解读 - 中华人民共和国工业和信息化部",
+    "feedUrl": "https://rsshub.app/gov/miit/zcjd"
+  },
+  {
+    "title": "ScienceDirect Publication: Agricultural Systems",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/0308521X"
+  },
+  {
+    "title": "The DFIR Report",
+    "feedUrl": "https://thedfirreport.com/feed/"
+  },
+  {
+    "title": "VentureBeat",
+    "feedUrl": "https://feeds.feedburner.com/venturebeat/SZYF"
+  },
+  {
+    "title": "The GreyNoise Blog",
+    "feedUrl": "https://www.greynoise.io/blog/rss.xml"
+  },
+  {
+    "title": "JAMA Oncology Online First",
+    "feedUrl": "https://jamanetwork.com/rss/site_159/onlineFirst_174.xml"
+  },
+  {
+    "title": "Wiley: CA: A Cancer Journal for Clinicians: Table of Contents",
+    "feedUrl": "https://acsjournals.onlinelibrary.wiley.com/feed/15424863/most-recent"
+  },
+  {
+    "title": "Steam RSS News Feed",
+    "feedUrl": "https://store.steampowered.com/feeds/news.xml"
+  },
+  {
+    "title": "IEEE Transactions on Geoscience and Remote Sensing - new TOC",
+    "feedUrl": "https://ieeexplore.ieee.org/rss/TOC36.XML"
+  },
+  {
+    "title": "Jason Fried",
+    "feedUrl": "https://world.hey.com/jason/feed.atom"
+  },
+  {
+    "title": "MDN Blog",
+    "feedUrl": "https://developer.mozilla.org/en-US/blog/rss.xml"
+  },
+  {
+    "title": "Microsoft Security Response Center",
+    "feedUrl": "https://msrc.microsoft.com/blog/feed"
+  },
+  {
+    "title": "Copyblogger",
+    "feedUrl": "https://copyblogger.com/feed/"
+  },
+  {
+    "title": "Lex Fridman Podcast",
+    "feedUrl": "https://lexfridman.com/feed/podcast"
+  },
+  {
+    "title": "AWS Architecture Blog",
+    "feedUrl": "https://aws.amazon.com/blogs/architecture/feed/"
+  },
+  {
+    "title": "Release notes from FreshRSS",
+    "feedUrl": "https://github.com/FreshRSS/FreshRSS/releases.atom"
+  },
+  {
+    "title": "Synthesist in the Shell — A blog by Linghao Zhang",
+    "feedUrl": "https://linghao.io/feed.xml"
+  },
+  {
+    "title": "The Technium",
+    "feedUrl": "https://feedpress.me/thetechnium"
+  },
+  {
+    "title": "Awesome Python Weekly",
+    "feedUrl": "https://python.libhunt.com/newsletter/feed"
+  },
+  {
+    "title": "ScienceDirect Publication: New Biotechnology",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/18716784"
+  },
+  {
+    "title": "Next.js Blog",
+    "feedUrl": "https://nextjs.org/feed.xml"
+  },
+  {
+    "title": "CISA Cybersecurity Advisories",
+    "feedUrl": "https://www.cisa.gov/cybersecurity-advisories/cybersecurity-advisories.xml"
+  },
+  {
+    "title": "Josh Collinsworth",
+    "feedUrl": "https://joshcollinsworth.com/api/rss.xml"
+  },
+  {
+    "title": "ScienceDirect Publication: Food Policy",
+    "feedUrl": "https://rss.sciencedirect.com/publication/science/03069192"
+  },
+  {
+    "title": "WeLiveSecurity",
+    "feedUrl": "https://www.welivesecurity.com/en/rss/feed/"
+  },
+  {
+    "title": "- U.S. Dept. of Defense",
+    "feedUrl": "https://www.defense.gov/DesktopModules/MediaCollectionList/RSS.ashx?ModuleId=1165&PortalId=1"
+  },
+  {
+    "title": "AddyOsmani.com",
+    "feedUrl": "https://addyosmani.com/rss.xml"
+  },
+  {
+    "title": "The lancet oncology",
+    "feedUrl": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1n5QzcCTN-gR7mH4aj4FzDvlP5PgJHhVf_zenOVCZKYWaPJkg5/?fc=20250210210509&limit=15"
+  },
+  {
+    "title": "Google Search Central Blog",
+    "feedUrl": "https://feeds.feedburner.com/blogspot/amDG"
+  },
+  {
+    "title": "AEA Research Highlights",
+    "feedUrl": "https://www.aeaweb.org/research/rss-feed"
+  },
+  {
+    "title": "Debian News",
+    "feedUrl": "https://www.debian.org/News/news"
+  },
+  {
+    "title": "FRB: Speeches",
+    "feedUrl": "https://www.federalreserve.gov/feeds/speeches.xml"
+  },
+  {
+    "title": "blag",
+    "feedUrl": "https://avi.im/blag/index.xml"
+  },
+  {
+    "title": "The Exploit Database - CXSecurity.com",
+    "feedUrl": "https://cxsecurity.com/wlb/rss/exploit/"
+  },
+  {
+    "title": "FRB: FEDS Notes",
+    "feedUrl": "https://www.federalreserve.gov/feeds/feds_notes.xml"
+  },
+  {
+    "title": "AWS",
+    "feedUrl": "https://www.aboutamazon.com/news/aws.rss"
+  },
+  {
+    "title": "Plant Biotechnology Journal: Most Cited articles",
+    "feedUrl": "https://onlinelibrary.wiley.com/feed/14677652/most-cited"
+  },
+  {
+    "title": "Sustainability",
+    "feedUrl": "https://www.aboutamazon.com/news/sustainability.rss"
+  },
+  {
+    "title": "PortSwigger Research",
+    "feedUrl": "https://portswigger.net/research/rss"
+  }
+]

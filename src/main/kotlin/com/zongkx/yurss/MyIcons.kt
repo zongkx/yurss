@@ -12,5 +12,11 @@ object MyIcons {
     val ADD: Icon = IconLoader.getIcon("/add.svg", MyIcons::class.java)
 
     @JvmStatic
+    val EN: Icon = IconLoader.getIcon("/en.svg", MyIcons::class.java)
+
+    @JvmStatic
+    val CN: Icon = IconLoader.getIcon("/cn.svg", MyIcons::class.java)
+
+    @JvmStatic
     val DELETE: Icon = IconLoader.getIcon("/delete.svg", MyIcons::class.java)
 }
