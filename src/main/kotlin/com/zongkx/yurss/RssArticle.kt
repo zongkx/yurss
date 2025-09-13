@@ -11,3 +11,12 @@ data class RssArticle(
         return title
     }
 }
+
+//data class RssNode(
+//    val title: String,
+//    val feedUrl: String
+//) {
+//    override fun toString(): String {
+//        return title
+//    }
+//}
