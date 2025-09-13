@@ -1,12 +1,12 @@
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.7.2"
+    id("org.jetbrains.intellij.platform") version "2.9.0"
     id("maven-publish") // 添加 maven-publish 插件
 }
 
 group = "com.zongkx"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     gradlePluginPortal()
@@ -44,7 +44,7 @@ publishing {
         create<MavenPublication>("pluginPublication") {
             groupId = "com.zongkx.yurss" // 你的 GroupId
             artifactId = "yurss" // 你的 ArtifactId
-            version = "1.0.1" // 你的插件版本
+            version = "1.0.2" // 你的插件版本
 
             artifact(tasks.getByName("buildPlugin")) {
                 extension = "zip"
