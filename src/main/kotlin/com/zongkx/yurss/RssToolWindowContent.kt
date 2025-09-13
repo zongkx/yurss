@@ -7,89 +7,23 @@ import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.treeStructure.Tree
-import com.rometools.rome.feed.synd.SyndFeed
-import com.rometools.rome.io.SyndFeedInput
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
 import java.awt.BorderLayout
 import java.awt.Dimension
 import java.awt.EventQueue
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
-import java.io.StringReader
 import javax.swing.*
 import javax.swing.event.DocumentEvent
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.DefaultTreeModel
 import javax.swing.tree.TreePath
-
-// 定义一个数据类来存储 RSS 文章信息
-data class RssArticle(
-    val title: String,
-    val link: String,
-    val description: String,
-    val content: String
-) {
-    override fun toString(): String {
-        return title
-    }
-}
-
-// 使用 OkHttp 替换 URL.openStream() 来进行网络请求
-class RssService {
-    // OkHttp 客户端实例，建议在整个应用中重用以提高效率
-    private val httpClient = OkHttpClient.Builder().build()
-    private val htmlTagRegex = "<[^>]*>".toRegex()
-
-    suspend fun fetchRssFeed(url: String): List<RssArticle> {
-        return withContext(Dispatchers.IO) {
-            val articles = mutableListOf<RssArticle>()
-            try {
-                // 使用 OkHttp 构建请求
-                val request = Request.Builder()
-                    .url(url)
-                    .build()
-
-                // 执行请求并获取响应
-                val response: Response = httpClient.newCall(request).execute()
-
-                if (response.isSuccessful) {
-                    val feedContent = response.body?.string() ?: ""
-
-                    // 使用 StringReader 将内容传递给 Rome
-                    if (feedContent.isNotBlank()) {
-                        val input = SyndFeedInput()
-                        val feed: SyndFeed = input.build(StringReader(feedContent))
-
-                        for (entry in feed.entries) {
-                            val originalTitle = entry.title
-                            val originalDescription = entry.description?.value ?: ""
-                            val originalDescriptionContents =
-                                entry.contents?.joinToString(separator = " ") { it.value.toString() } ?: ""
-                            val link = entry.link
-                            val cleanedTitle = originalTitle.replace(htmlTagRegex, "").trim()
-                            val cleanedDescription = originalDescription.replace(htmlTagRegex, "").trim()
-                            val content = originalDescriptionContents.replace(htmlTagRegex, "").trim()
-                            articles.add(RssArticle(cleanedTitle, link, cleanedDescription, content))
-                        }
-                    }
-                } else {
-                    // 如果请求失败，添加错误信息
-                    articles.add(RssArticle("HTTP Error: ${response.code}", "", response.message, ""))
-                }
-            } catch (e: Exception) {
-                // 捕获并处理所有异常，包括网络和解析错误
-                articles.add(RssArticle("Error: ${e.message}", "", "", ""))
-            }
-            articles
-        }
-    }
-}
 
 // RssToolWindow 的 UI 内容
 class RssToolWindowContent() {
@@ -206,14 +140,14 @@ class RssToolWindowContent() {
                             val url = node.userObject as String
                             val popupMenu = JPopupMenu()
 
-                            val deleteItem = JMenuItem("删除")
+                            val deleteItem = JMenuItem("DELETE")
                             deleteItem.addActionListener {
                                 treeModel.removeNodeFromParent(node)
                                 saveRssUrls()
                                 contentArea.text = "..."
                             }
 
-                            val refreshItem = JMenuItem("刷新")
+                            val refreshItem = JMenuItem("REFRESH")
                             refreshItem.addActionListener {
                                 loadRssFeed(url)
                             }
@@ -227,12 +161,6 @@ class RssToolWindowContent() {
                 }
             }
         })
-
-        // 设置内容区域
-        contentArea.lineWrap = true
-        contentArea.wrapStyleWord = true
-        contentArea.isEditable = false
-
         // 使用更现代的 OnePixelSplitter
         val splitter = OnePixelSplitter(false, 0.3f)
         splitter.firstComponent = JBScrollPane(articleTree)
@@ -273,11 +201,6 @@ class RssToolWindowContent() {
             }
         }
         return ""
-    }
-
-    // 新增：根据搜索文本过滤并显示结果（此函数现在只用于显示已加载源的文章，不处理本地rss.json）
-    private fun searchLocalRss(query: String) {
-        // 此函数不再使用
     }
 
     // 新增：显示联想建议的弹出菜单
@@ -356,14 +279,6 @@ class RssToolWindowContent() {
                 if (!isUrlInTree(url)) {
                     addUrlToTree(url)
                 }
-            }
-
-            // ***** 关键修改：自动展开所有顶级节点 *****
-            val enumeration = rootNode.children()
-            while (enumeration.hasMoreElements()) {
-                val node = enumeration.nextElement() as DefaultMutableTreeNode
-                val path = TreePath(node.path)
-                articleTree.expandPath(path)
             }
         }
     }
